@@ -11,24 +11,37 @@
     height: 50rem;
 }
 
-.d-none {
-    display: none;
-}
-
 .nav__burger {
     opacity: 0;
     margin-right: 1.8rem;
 }
 
+.nav__burger-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-top: 0.8rem;
+    z-index: 3;
+}
+
 .nav__burger-btn {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 1.2rem;
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
     margin-left: 2rem;
     margin-top: 1rem;
+    z-index: 3;
 }
 
 .nav__burger-btn>span,
@@ -75,14 +88,15 @@
 
 .nav__mobile-menu-list {
     visibility: hidden;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    position: fixed;
     width: 100%;
     height: 100%;
     transition: 0.3s;
     right: -100%;
     padding-top: 10rem;
+    z-index: 2;
 }
 
 .nav__mobile-list-item {
