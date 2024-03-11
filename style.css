@@ -28,7 +28,10 @@
     border-radius: 50%;
     margin: 1rem;
 }
-
+.header__button:hover, .meny__button:hover {
+    filter: brightness(1.75);
+    cursor: pointer;
+}
 .header__button--navigation {
     width: 48px;
     height: 48px;
