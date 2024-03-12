@@ -46,3 +46,17 @@ async function showCoffee() {
 }
 
 showCoffee();
+
+// Open/close varukorgen
+const basketBtn = document.getElementById('basketBtn');
+const varukorg = document.querySelector('.varukorg-section');
+
+basketBtn.addEventListener('click', () => {
+    varukorg.classList.toggle('d-none');
+});
+
+varukorg.addEventListener('click', (event) => {
+  if (event.target === varukorg) {
+    varukorg.classList.add('d-none');
+  }
+});

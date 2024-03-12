@@ -1,57 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Air Bean</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="mobile__wrapper">
-    <header class="header__meny">
-            <button class="header__button header__button--navigation" id="navButton"><img src="/Assets/navicon.svg"></button>
-            <button class="header__button header__button--basket"><img src="/Assets/bag.svg"></button>
-    </header>
-    <main class="meny">
+      <header class="header__meny">
+        <button
+          class="header__button header__button--navigation"
+          id="navButton"
+        >
+          <img src="/Assets/navicon.svg" />
+        </button>
+        <button id="basketBtn" class="header__button header__button--basket">
+          <img src="/Assets/bag.svg" />
+        </button>
+        <!-- VARUKORG -->
+        <section class="varukorg-section d-none">
+          <article class="varukorg">
+            <h2 class="varukorg__title">Din beställning</h2>
+            <div class="varukorg__info">
+              <ul class="varukorg__list">
+                <li class="varukorg__list-item">
+                  <h3 class="varukorg__item-name">Bryggkaffe</h3>
+                  <p class="varukorg__undertext">69 kr</p>
+                  <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                  </div>
+                </li>
+                <li class="varukorg__list-item">
+                  <h3 class="varukorg__item-name">Caffé Doppio</h3>
+                  <p class="varukorg__undertext">69 kr</p>
+                  <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                  </div>
+                </li>
+                <li class="varukorg__list-item">
+                  <h3 class="varukorg__item-name">Cappuccino</h3>
+                  <p class="varukorg__undertext">69 kr</p>
+                  <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                  </div>
+                </li>
+              </ul>
+              <div class="varukorg__total-price">
+                <span>Total</span>
+                <p>200 kr</p>
+                <p
+                  class="varukorg__undertext varukorg__undertext--total-undertext"
+                >
+                  inkl moms + drönarleverans
+                </p>
+              </div>
+            </div>
+            <button class="varukorg__btn">Take my money!</button>
+          </article>
+        </section>
+        <!-- VARUKORG -->
+      </header>
+      <main class="meny">
         <h1 class="meny__title">Meny</h1>
         <section class="meny__overview">
-            <article class="meny__article">
-                <section class="meny_info-section">
-                    <button class="meny__button"><img src="/Assets/add.svg"></button>
-                    <section class="detail-section">
-                        <h2 class="meny__subtitle">Coffee</h2>
-                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
-                    </section>
-                    <h2 class="meny__subtitle">10kr</h2>
-                </section>
-            </article>
-            <article class="meny__article">
-                <section class="meny_info-section">
-                    <button class="meny__button"><img src="/Assets/add.svg"></button>
-                    <section class="detail-section">
-                        <h2 class="meny__subtitle">Coffee</h2>
-                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
-                    </section>
-                    <h2 class="meny__subtitle">10kr</h2>
-                </section>
-            </article>
-            <article class="meny__article">
-                <section class="meny_info-section">
-                    <button class="meny__button"><img src="/Assets/add.svg"></button>
-                    <section class="detail-section">
-                        <h2 class="meny__subtitle">Coffee</h2>
-                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
-                    </section>
-                    <h2 class="meny__subtitle">10kr</h2>
-                </section>
-            </article>
+          <article class="meny__article">
+            <section class="meny_info-section">
+              <button class="meny__button">
+                <img src="/Assets/add.svg" />
+              </button>
+              <section class="detail-section">
+                <h2 class="meny__subtitle">Coffee</h2>
+                <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+              </section>
+              <h2 class="meny__subtitle">10kr</h2>
+            </section>
+          </article>
+          <article class="meny__article">
+            <section class="meny_info-section">
+              <button class="meny__button">
+                <img src="/Assets/add.svg" />
+              </button>
+              <section class="detail-section">
+                <h2 class="meny__subtitle">Coffee</h2>
+                <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+              </section>
+              <h2 class="meny__subtitle">10kr</h2>
+            </section>
+          </article>
+          <article class="meny__article">
+            <section class="meny_info-section">
+              <button class="meny__button">
+                <img src="/Assets/add.svg" />
+              </button>
+              <section class="detail-section">
+                <h2 class="meny__subtitle">Coffee</h2>
+                <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+              </section>
+              <h2 class="meny__subtitle">10kr</h2>
+            </section>
+          </article>
         </section>
-    </main>
-    <footer><img src="/Assets/graphics-footer.svg"></footer>
+      </main>
+      <footer><img src="/Assets/graphics-footer.svg" /></footer>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
