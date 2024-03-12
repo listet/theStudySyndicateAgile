@@ -46,3 +46,25 @@ async function showCoffee() {
 }
 
 showCoffee();
+
+let ordernumbers = JSON.parse(localStorage.getItem('ordernumbers')) || [];
+
+function generateOrdernumber() {
+    let ordernumber;
+    let isUnique = false;
+
+    while (!isUnique) { 
+        ordernumber = Date.now() + (Math.floor(Math.random() * 10000));
+        if (!ordernumbers.includes(ordernumber)) {
+            isUnique = true;
+        }
+    }
+    ordernumbers.push(ordernumber);
+    localStorage.setItem('ordernumbers', JSON.stringify(ordernumbers));
+
+    console.log(ordernumber);
+    return ordernumber;
+}
+
+// Behöver kalla på funktionen generateOrdernumber(); när man klickar på beställknappen
+
