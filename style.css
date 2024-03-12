@@ -97,3 +97,76 @@
 .footer__meny {
     height: 73px;
 }
+
+.about__header {
+    background-image: url(/Assets/graphics-header.svg);
+    height: 113px;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.about__content {
+    color: var(--Airbean-brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "PT Serif", serif;
+    text-align: left;
+}
+
+.about__title {
+    margin-left: 1.8rem;
+    margin-top: 1.5rem;
+    font-size: 3rem;
+}
+
+.about__bold__text{
+    font-style: "Work Sans";
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    line-height: 1.4;
+}
+
+.about__text {
+    font-style: "Work Sans";
+    line-height: 1.6; 
+    margin-top: 1rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+}
+
+.about__profile {
+    color: var(--Airbean-brown);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about__image {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.about__name{
+    font-family: "PT Serif", serif;
+    margin-bottom: .3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.about__role{
+    font-family: "Work Sans", serif;
+}
