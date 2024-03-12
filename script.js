@@ -46,3 +46,12 @@ async function showCoffee() {
 }
 
 showCoffee();
+
+function generateOrdernumber() {
+
+    let ordernumber = Date.now() + (Math.floor(Math.random() * 10000));
+    console.log(ordernumber);
+    return ordernumber;
+}
+
+generateOrdernumber();
