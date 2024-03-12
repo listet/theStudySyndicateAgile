@@ -7,6 +7,7 @@
 :root {
     --Airbean-brown: #2F2926;
     --Airbean-pink: #F3E4E1;
+    --Airbean-dark-green: #0E927D;
 }
 
 .mobile__wrapper {
@@ -14,6 +15,114 @@
     margin: 0 auto;
     background-color: var(--Airbean-pink);
 }
+
+/*-----loginsidan-----*/
+
+.mobile__wrapper-dark {
+    max-width: 375px;
+    height: 667px;
+    margin: 0 auto;
+
+    background-color: var(--Airbean-brown);
+}
+
+.form__container {
+    height: 566px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-bottom: 16px;
+    padding: 2rem 1rem 2rem 1rem;
+    border-radius: 3px;
+    background-color: var(--Airbean-pink);
+    max-width: 341px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    transform: translateY(-30px);
+}
+
+.login__content-h1-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__h1 {
+    font-family: "PT Serif", serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 38px;
+    color: var(--Airbean-brown);
+}
+
+.login__p {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 24px;
+    color: var(--Airbean-brown);
+}
+
+.input__label {
+    font-family: "Work Sans", sans-serif;
+    color: var(--Airbean-brown);
+    font-size: 12px;
+    font-weight: 400; 
+}
+
+.input__field {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--Airbean-pink);
+    width: 310px;
+    height: 48px;
+    border-color: var(--Airbean-brown);
+    border-radius: 6px;
+    color: var(--Airbean-brown);
+    padding-left: 1rem;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--Airbean-brown);
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--Airbean-dark-green);
+}
+
+.login__btn-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.login__btn {
+    align-self: center;
+    width: 248px;
+    height: 55px;
+    border-radius: 50px;
+    border: 0;
+    font-family: "PT Serif", serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--Airbean-brown);
+    color: var(--Airbean-pink);
+    
+}
+
+/*------------------*/
 
 .header__meny {
     background-image: url(/Assets/graphics-header.svg);
@@ -28,10 +137,13 @@
     border-radius: 50%;
     margin: 1rem;
 }
-.header__button:hover, .meny__button:hover {
+
+.header__button:hover,
+.meny__button:hover {
     filter: brightness(1.75);
     cursor: pointer;
 }
+
 .header__button--navigation {
     width: 48px;
     height: 48px;
@@ -127,7 +239,7 @@
     font-size: 3rem;
 }
 
-.about__bold__text{
+.about__bold__text {
     font-style: "Work Sans";
     font-weight: bold;
     margin-top: 1rem;
@@ -138,7 +250,7 @@
 
 .about__text {
     font-style: "Work Sans";
-    line-height: 1.6; 
+    line-height: 1.6;
     margin-top: 1rem;
     margin-left: 1.8rem;
     margin-right: 1.8rem;
@@ -163,13 +275,13 @@
     height: 5rem;
 }
 
-.about__name{
+.about__name {
     font-family: "PT Serif", serif;
     margin-bottom: .3rem;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.about__role{
+.about__role {
     font-family: "Work Sans", serif;
 }
