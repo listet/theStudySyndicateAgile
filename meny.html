@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Air Bean</title>
     <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Mobile nav -->
+    <div class="mobile__wrapper">
+    <header class="header__meny">
+               <!-- Mobile nav -->
     <nav class="nav__mobile-menu">
         <div class="nav__burger-circle"></div>
         <input type="checkbox" class="nav__burger" id="burger">
@@ -26,7 +30,46 @@
             <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Orderstatus</a></li>
         </ul>
     </nav>
-
+      <button class="header__button header__button--basket"><img src="/Assets/bag.svg"></button>
+    </header>
+    <main class="meny">
+        <h1 class="meny__title">Meny</h1>
+        <section class="meny__overview">
+            <article class="meny__article">
+                <section class="meny_info-section">
+                    <button class="meny__button"><img src="/Assets/add.svg"></button>
+                    <section class="detail-section">
+                        <h2 class="meny__subtitle">Coffee</h2>
+                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+                    </section>
+                    <h2 class="meny__subtitle">10kr</h2>
+                </section>
+            </article>
+            <article class="meny__article">
+                <section class="meny_info-section">
+                    <button class="meny__button"><img src="/Assets/add.svg"></button>
+                    <section class="detail-section">
+                        <h2 class="meny__subtitle">Coffee</h2>
+                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+                    </section>
+                    <h2 class="meny__subtitle">10kr</h2>
+                </section>
+            </article>
+            <article class="meny__article">
+                <section class="meny_info-section">
+                    <button class="meny__button"><img src="/Assets/add.svg"></button>
+                    <section class="detail-section">
+                        <h2 class="meny__subtitle">Coffee</h2>
+                        <p class="meny__info">Lorem ipsum dolor sit amet.</p>
+                    </section>
+                    <h2 class="meny__subtitle">10kr</h2>
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer><img src="/Assets/graphics-footer.svg"></footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
