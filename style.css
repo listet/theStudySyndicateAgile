@@ -177,3 +177,18 @@
 .about__role {
     font-family: "Work Sans", serif;
 }
+
+.loading {
+    position: fixed;
+    top: 30vh;
+    left: 48vw;
+    width: 337px;
+    margin: auto;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    width: 100px;
+    height: 100px;
+    padding:1rem;
+    border-radius: 50%;
+    z-index: 1000;
+}

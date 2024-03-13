@@ -21,6 +21,7 @@ async function showCoffee() {
         const button = document.createElement('button');
         button.classList.add('meny__button');
         button.innerHTML = '<img src="/Assets/add.svg">';
+        button.setAttribute('id', coffee.id);
         const detailSection = document.createElement('section');
         detailSection.classList.add('detail-section');
         const title = document.createElement('h2');
@@ -67,4 +68,3 @@ function generateOrdernumber() {
 }
 
 // Behöver kalla på funktionen generateOrdernumber(); när man klickar på beställknappen
-
