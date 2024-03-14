@@ -21,6 +21,7 @@ async function showCoffee() {
         const button = document.createElement('button');
         button.classList.add('meny__button');
         button.innerHTML = '<img src="/Assets/add.svg">';
+        button.setAttribute('id', coffee.id);
         const detailSection = document.createElement('section');
         detailSection.classList.add('detail-section');
         const title = document.createElement('h2');
@@ -60,3 +61,25 @@ varukorg.addEventListener('click', (event) => {
     varukorg.classList.add('d-none');
   }
 });
+
+
+let ordernumbers = JSON.parse(localStorage.getItem('ordernumbers')) || [];
+
+function generateOrdernumber() {
+    let ordernumber;
+    let isUnique = false;
+
+    while (!isUnique) { 
+        ordernumber = Date.now() + (Math.floor(Math.random() * 10000));
+        if (!ordernumbers.includes(ordernumber)) {
+            isUnique = true;
+        }
+    }
+    ordernumbers.push(ordernumber);
+    localStorage.setItem('ordernumbers', JSON.stringify(ordernumbers));
+
+    console.log(ordernumber);
+    return ordernumber;
+}
+
+// Behöver kalla på funktionen generateOrdernumber(); när man klickar på beställknappen

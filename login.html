@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="/lazyloader.js" type="module"></script>
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="mobile__wrapper mobile__wrapper-dark">
+        <header class="header__meny">
+            <!-- Mobile nav -->
+            <nav class="nav__mobile-menu">
+                <div class="nav__burger-circle"></div>
+                <input type="checkbox" class="nav__burger" id="burger">
+                <label class="nav__burger-btn" for="burger">
+                    <span></span>
+                </label>
+                <ul class="nav__mobile-menu-list">
+                    <li class="nav__mobile-list-item"><a href="meny.html" class="nav__mobile-menu-link">Meny</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="about.html" class="nav__mobile-menu-link">Vårt kaffe</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Min profil</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="/status-sida.html" class="nav__mobile-menu-link">Orderstatus</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="form__container">
+            <section class="login__content-h1-text">
+                <img src="./Assets/logo-sml.svg" alt="logo"> <br>
+                <h1 class="login__h1">Välkommen till AirBean-familjen!</h1> <br>
+                <p class="login__p">Genom att skapa ett konto nedan kan du spara och se din historik</p> <br>
+            </section>
+            <section class="login__container-form">
+                <form>
+                    <div class="input-section">
+                        <label class="input__label" for="loginName">Namn</label><br>
+                        <input class="input__field" id="loginName" type="text" placeholder="Skriv namn"><br><br>
+
+                        <label class="input__label" for="loginPassword">Epost</label><br>
+                        <input class="input__field" id="loginPassword" type="password"
+                            placeholder="skriv lösenord"><br><br>
+
+                        <input id="gdprCheckbox" type="checkbox">
+                        <label class="input__label" for="gdprCheckbox">GDPR Ok!</label><br><br>
+                    </div>
+
+                    <div class="login__btn-container">
+                        <input class="login__btn" id="loginBtn" type="submit" value="Brew me a cup!">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+
+</html>
