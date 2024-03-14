@@ -20,7 +20,7 @@ async function showCoffee() {
         coffeeSection.classList.add('meny_info-section');
         const button = document.createElement('button');
         button.classList.add('meny__button');
-        button.innerHTML = '<img src="/Assets/add.svg">';
+        button.innerHTML = '<img src="/Assets/add.svg" alt="an image of a plus sign">';
         button.setAttribute('id', coffee.id);
         const detailSection = document.createElement('section');
         detailSection.classList.add('detail-section');
