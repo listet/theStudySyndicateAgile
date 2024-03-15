@@ -1,0 +1,38 @@
+:root {
+    --dark-green: #38846D;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.landningssida__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-height:  667px;
+    max-width:  375px;
+    margin: 0 auto;
+    background-color: var(--dark-green);
+}
+
+.logo__section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0; /*pga position absolute så funkar detta med noll för att loggan inte ska expandera iväg nån annanstans*/
+    height: 0;
+  }
+
+  .logo__section:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform: scale(1.05);
+  }
