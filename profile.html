@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="burger.css"/>
+</head>
+<body>
+    <main class="profile">
+        <header class="header__meny">
+            <!-- Mobile nav -->
+            <nav class="nav__mobile-menu">
+                <div class="nav__burger-circle"></div>
+                <input type="checkbox" class="nav__burger" id="burger">
+                <label class="nav__burger-btn" for="burger">
+                    <span></span>
+                </label>
+                <ul class="nav__mobile-menu-list">
+                    <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Meny</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Vårt kaffe</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Min profil</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="XX" class="nav__mobile-menu-link">Orderstatus</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="profile__person-info">
+            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar">
+            <h1 class="profile__person-info-name">Sixten Kaffelövér</h1>
+            <p class="profile__person-info-email">sixten.kaffelover@zocom.se</p>
+        </section>
+        <section class="profile__orderhistory">
+            <h1 class="orderhistory__title">Orderhistorik</h1>
+            <aside class="order__info-wrapper">
+                <p class="order__info-order order-id">#AB1123282323Z</p>
+                <p class="order__info-order order-date right">20/03/06</p>
+                <p class="order__info-order order-total">total ordersumma</p>
+                <p class="order__info-order order-total-number right">443 kr</p>
+            </aside>
+            <div class="section__divider"></div>
+            <aside class="order__info-wrapper">
+                <p class="order__info-order order-id">#AB1128382323X</p>
+                <p class="order__info-order order-date right">20/03/03</p>
+                <p class="order__info-order order-total">total ordersumma</p>
+                <p class="order__info-order order-total-number right">333 kr</p>
+            </aside>
+            <div class="section__divider"></div>
+            <aside class="order__info-wrapper">
+                <p class="order__info-order order-id">#AB1444482323X</p>
+                <p class="order__info-order order-date right">20/02/21</p>
+                <p class="order__info-order order-total">total ordersumma</p>
+                <p class="order__info-order order-total-number right">893 kr</p>
+            </aside>
+            <div class="section__divider dark__divider"></div>
+            <aside class="order__total-spent">
+                <p class="order__spent">Totalt spenderat</p>
+                <p class="order__spent-number right">1669 kr</p>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

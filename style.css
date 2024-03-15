@@ -7,12 +7,14 @@
 :root {
     --Airbean-brown: #2F2926;
     --Airbean-pink: #F3E4E1;
+    --Airbean-dark-green: #0E927D;
 }
 
 .mobile__wrapper {
     width: 375px;
     margin: 0 auto;
     background-color: var(--Airbean-pink);
+    overflow: hidden;
 }
 
 .header__meny {
@@ -25,13 +27,17 @@
 }
 
 .header__button {
+    position: relative;
     border-radius: 50%;
     margin: 1rem;
 }
-.header__button:hover, .meny__button:hover {
+
+.header__button:hover,
+.meny__button:hover {
     filter: brightness(1.75);
     cursor: pointer;
 }
+
 .header__button--navigation {
     width: 48px;
     height: 48px;
@@ -41,6 +47,167 @@
     background-color: var(--Airbean-brown);
     width: 60px;
     height: 60px;
+    z-index: 99;
+}
+
+.varukorg-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 97;
+}
+
+.varukorg {
+    position: absolute;
+    top: 90px;
+    height: 575px;
+    width: 341px;
+    background: #ffffff;
+    color: var(--Airbean-brown);
+    border-radius: 3px;
+    font-family: "PT Serif", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    z-index: 99;
+}
+.varukorg::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 17.5px;
+    rotate: 45deg;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+}
+
+.varukorg__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0 20px 0 30px;
+}
+
+.varukorg__title {
+    margin-top: 50px;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.varukorg__list {
+    list-style: none;
+}
+
+.varukorg__list-item {
+    position: relative;
+    font-size: 20px; 
+    line-height: 24px;
+    height: 40px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.varukorg__item-name {
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+}
+
+.varukorg__list-item::after {
+    content: '.........................................';
+    position: absolute;
+}
+
+.varukorg__quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-family: Work Sans;
+    font-weight: 600;
+}
+
+.material-symbols-outlined {
+    margin: -7px;
+    cursor: pointer;
+}
+
+.varukorg__undertext {
+    position: absolute;
+    bottom: -8px;
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.varukorg__undertext--total-undertext {
+    bottom: 108px;
+}
+
+.varukorg__total-price {
+    font-size: 23px;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.varukorg__total-price span {
+    background-color: #ffffff;
+}
+
+.varukorg__total-price span::after {
+    content: '......................';
+    position: absolute;
+}
+
+.varukorg__total-price span {
+    background-color: #ffffff;
+}
+
+.varukorg__btn {
+    background: var(--Airbean-brown);
+    color: #ffffff;
+    width: 248px;
+    min-height: 55px;
+    border-radius: 50px;
+    font-family: "PT Serif", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: 0.1s;
+}
+
+.varukorg__btn:hover {
+    background-color: #ffffff;
+    color: var(--Airbean-brown);
+}
+
+.varukorg__btn:active {
+    transform: scale(0.9);
+    background: var(--Airbean-brown);
+    color: #ffffff;
+}
+
+.d-none {
+    display: none;
 }
 
 .meny__title {
@@ -127,7 +294,7 @@
     font-size: 3rem;
 }
 
-.about__bold__text{
+.about__bold__text {
     font-style: "Work Sans";
     font-weight: bold;
     margin-top: 1rem;
@@ -138,7 +305,7 @@
 
 .about__text {
     font-style: "Work Sans";
-    line-height: 1.6; 
+    line-height: 1.6;
     margin-top: 1rem;
     margin-left: 1.8rem;
     margin-right: 1.8rem;
@@ -163,13 +330,28 @@
     height: 5rem;
 }
 
-.about__name{
+.about__name {
     font-family: "PT Serif", serif;
     margin-bottom: .3rem;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.about__role{
+.about__role {
     font-family: "Work Sans", serif;
+}
+
+.loading {
+    position: fixed;
+    top: 30vh;
+    left: 48vw;
+    width: 337px;
+    margin: auto;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    width: 100px;
+    height: 100px;
+    padding:1rem;
+    border-radius: 50%;
+    z-index: 1000;
 }
