@@ -111,5 +111,5 @@ input[type="checkbox"]:checked {
     font-weight: 700;
     background-color: var(--Airbean-brown);
     color: var(--Airbean-pink);
-    
+    cursor: pointer;
 }
