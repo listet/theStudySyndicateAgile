@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Serif", serif;
+    font-family: sans;
+}
+
+:root {
+    --Airbean-brown: #2F2926;
+    --Airbean-pink: #F3E4E1;
+    --Airbean-dark-green: #0E927D;
+}
+
+.profile {
+    margin: 0 auto;
+    width: 375px;
+    min-height: 700px;
+
+    background-color: var(--Airbean-brown);
+}
+
+.profile__person-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.profile__person-info-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.profile__person-info-email {
+    color: white;
+    opacity: 80%;
+    font-size: 13px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.profile__orderhistory {
+    margin: 20px;
+}
+
+.orderhistory__title {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.order__info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: white;
+    row-gap: 2px;
+}
+
+.right {
+    text-align: right;
+}
+
+.order__info-order {
+    opacity: 80%;
+    font-size: 11px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.order-id {
+    font-weight: bold;
+}
+
+.section__divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dark__divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.order__total-spent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.order__spent, .order__spent-number {
+    font-weight: bold;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+}
