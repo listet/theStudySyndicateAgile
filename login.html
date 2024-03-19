@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -41,6 +43,52 @@
             <button id="basketBtn" class="header__button header__button--basket">
                 <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
             </button>
+                <!-- VARUKORG -->
+        <section class="varukorg-section d-none">
+            <article class="varukorg">
+            <h2 class="varukorg__title">Din beställning</h2>
+            <div class="varukorg__info">
+                <ul class="varukorg__list">
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Bryggkaffe</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Caffé Doppio</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Cappuccino</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                </ul>
+                <div class="varukorg__total-price">
+                <span>Total</span>
+                <p>200 kr</p>
+                <p class="varukorg__undertext varukorg__undertext--total-undertext">
+                    inkl moms + drönarleverans
+                </p>
+                </div>
+            </div>
+            <button class="varukorg__btn">Take my money!</button>
+            </article>
+        </section>
+        <!-- VARUKORG -->
         </header>
         <section class="form__container">
             <section class="login__content-h1-text">
@@ -71,6 +119,7 @@
     </div>
 
     <script src="account.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
