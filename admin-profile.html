@@ -51,7 +51,7 @@
 
             <section class="admin__form-container">
                 <h3 class="profile-h3">Lägg till ny produkt</h3>
-                    <form class="admin__form" id="adminForm">
+                    <form class="admin__form" id="adminFormAdd">
                         <label class="label" for="id">ID:</label><br>
                         <input class="input__field" type="number" id="id" name="id" required><br><br>
                         <label class="label" for="title">Produktnamn:</label><br>
@@ -65,13 +65,13 @@
                         <label class="label" for="rating">Rating:</label><br>
                         <input class="input__field" type="number" id="rating" name="rating" step="0.1" min="0" max="5" required><br><br>
                         <label class="label" for="image">Bild URL:</label><br>
-                        <input class="input__field" type="text" id="image" name="image" required><br><br>
+                        <input class="input__field" type="text" id="image" name="image"><br><br>
                         <button class="profile__btn" type="submit">Lägg till produkt</button>
                     </form>
             </section>
             <section class="admin__form-container">
                 <h3 class="profile-h3">Ändra Pris</h3>
-                <form class="admin__form" id="adminForm">
+                <form class="admin__form" id="adminFormChangePrice">
                     <label class="label" for="changeProductId">ID av produkt att byta pris på:</label><br>
                     <input class="input__field" type="number" id="changeProductId" name="changeProductId" required><br><br>
                     <label class="label" for="newPrice">Ny Pris:</label><br>
@@ -81,7 +81,7 @@
             </section>
             <section class="admin__form-container">
                 <h3 class="profile-h3">Ta bort produkt</h3>
-                <form class="admin__form" id="adminForm">
+                <form class="admin__form" id="adminFormRemove">
                     <label class="label" for="removeProductId">Produkt-ID att ta bort:</label><br>
                     <input class="input__field" type="number" id="removeProductId" name="removeProductId" required><br><br>
                     <button class="profile__btn" type="submit">Ta Bort Produkt</button>
@@ -89,7 +89,7 @@
             </section>
         </section>
     </main>
-    <script src="./admin.js"></script>
+    <script src="./admin.js" type="module"></script>
 </body>
 
 </html>

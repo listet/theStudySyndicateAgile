@@ -1,34 +1,48 @@
 'use strict'
 
-import { getApi } from "./script.js";
+document.addEventListener('DOMContentLoaded', function () {
+    initializeAdminCoffee();
+});
+
+console.log('Initial localStorage data:', localStorage.getItem('adminCoffee'));
+
+async function getApi(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 async function initializeAdminCoffee() {
     try {
         const url = 'https://santosnr6.github.io/Data/airbeanproducts.json';
         const data = await getApi(url);
+        console.log('Datan från APIn:', data);
         updateAdminCoffee(data.menu);
     } catch (error) {
         console.log(error);
     }
 }
 
-// Function to get stored coffee data from localStorage
+
 function adminCoffee() {
     const storedCoffees = localStorage.getItem('adminCoffee');
     return storedCoffees ? JSON.parse(storedCoffees) : [];
 }
 
-// Function to update stored coffee data in localStorage
+
 function updateAdminCoffee(coffees) {
     localStorage.setItem('adminCoffee', JSON.stringify(coffees));
 }
 
-// Function to add a new coffee to the list
-function addNewProduct(event) {
-    event.preventDefault(); // Prevent form submission
 
-    // Get form inputs
+function addNewProduct(event) {
+    event.preventDefault();
+
     const id = parseInt(document.getElementById('id').value);
     const title = document.getElementById('title').value;
     const desc = document.getElementById('desc').value;
@@ -37,7 +51,6 @@ function addNewProduct(event) {
     const rating = parseFloat(document.getElementById('rating').value);
     const image = document.getElementById('image').value;
 
-    // Create new product object
     const newProduct = {
         id: id,
         title: title,
@@ -48,56 +61,49 @@ function addNewProduct(event) {
         image: image
     };
 
-    // Add new product to the list
     addProductToList(newProduct);
 
-    // Reset form
     event.target.reset();
 }
 
-// Function to add the new product to the list
+
 function addProductToList(product) {
     const products = adminCoffee();
     products.push(product);
     updateAdminCoffee(products);
 }
 
-// Function to remove a product from the list by ID
-function removeProduct(event) {
-    event.preventDefault(); // Prevent form submission
 
-    // Get product ID to remove
+function removeProduct(event) {
+    event.preventDefault();
+
     const productId = parseInt(document.getElementById('removeProductId').value);
 
-    // Remove product
     removeProductById(productId);
 
-    // Reset form
     event.target.reset();
 }
 
-// Function to remove a product from the list by ID
+
+
 function removeProductById(id) {
     const products = adminCoffee().filter(product => product.id !== id);
     updateAdminCoffee(products);
 }
 
-// Function to change the price of a product by ID
-function changeProductPrice(event) {
-    event.preventDefault(); // Prevent form submission
 
-    // Get form inputs
+function changeProductPrice(event) {
+    event.preventDefault();
+
     const productId = parseInt(document.getElementById('changeProductId').value);
     const newPrice = parseFloat(document.getElementById('newPrice').value);
 
-    // Change product price
     changeProductPriceById(productId, newPrice);
 
-    // Reset form
     event.target.reset();
 }
 
-// Function to change the price of a product by ID
+
 function changeProductPriceById(id, newPrice) {
     const products = adminCoffee();
     const index = products.findIndex(product => product.id === id);
@@ -107,8 +113,9 @@ function changeProductPriceById(id, newPrice) {
     }
 }
 
-// Add event listener to form submit events
-document.getElementById('addProductForm').addEventListener('submit', addNewProduct);
-document.getElementById('removeProductForm').addEventListener('submit', removeProduct);
-document.getElementById('changePriceForm').addEventListener('submit', changeProductPrice);
+
+document.getElementById('adminFormAdd').addEventListener('submit', addNewProduct);
+document.getElementById('adminFormChangePrice').addEventListener('submit', changeProductPrice);
+document.getElementById('adminFormRemove').addEventListener('submit', removeProduct);
+
 

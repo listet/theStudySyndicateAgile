@@ -24,7 +24,7 @@ window.addEventListener('load', async () => {
                 }
                 const role = user.role;
                 if (role === 'admin') {
-                    window.location.href = 'profile.html' // ADMIN lägg till rätt html länk här!
+                    window.location.href = 'admin-profile.html' // ADMIN lägg till rätt html länk här!
                 } else {
                     window.location.href = 'profile.html' // USER lägg till rätt html länk här!
                 }

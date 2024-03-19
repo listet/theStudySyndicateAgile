@@ -1,4 +1,4 @@
-export async function getApi(url) {
+async function getApi(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
