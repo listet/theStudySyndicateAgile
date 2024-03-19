@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="./admin-profile.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="burger.css" />
+</head>
+
+<body>
+    <main class="profile">
+        <header class="header__meny">
+            <!-- Mobile nav -->
+            <nav class="nav__mobile-menu">
+                <div class="nav__burger-circle"></div>
+                <input type="checkbox" class="nav__burger" id="burger">
+                <label class="nav__burger-btn" for="burger">
+                    <span></span>
+                </label>
+                <ul class="nav__mobile-menu-list">
+                    <li class="nav__mobile-list-item"><a href="meny.html" class="nav__mobile-menu-link">Meny</a></li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="about.html" class="nav__mobile-menu-link">Vårt kaffe</a>
+                    </li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="login.html" class="nav__mobile-menu-link">Min profil</a>
+                    </li>
+                    <hr class="nav__mobile-line">
+                    <li class="nav__mobile-list-item"><a href="status-sida.html"
+                            class="nav__mobile-menu-link">Orderstatus</a></li>
+                </ul>
+            </nav>
+            <button id="basketBtn" class="header__button header__button--basket">
+                <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+            </button>
+        </header>
+
+        <section class="profile__person-info">
+            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar">
+            <h1 class="profile__person-info-name">Jesper Kaffeberg</h1>
+            <p class="profile__person-info-email">jesper.kaffeberg@zocom.se</p>
+            <h2 class="orderhistory__title">Administration<h2></h2><br>
+        </section>
+
+        <section class="admin__container" id="adminContainer">
+
+            <section class="admin__form-container">
+                <h3 class="profile-h2">Lägg till ny produkt</h2>
+                    <form class="admin__form" id="adminForm">
+                        <label for="id">ID:</label><br>
+                        <input type="number" id="id" name="id" required><br><br>
+                        <label for="title">Produktnamn:</label><br>
+                        <input type="text" id="title" name="title" required><br><br>
+                        <label for="desc">Kort Beskrivning:</label><br>
+                        <input type="text" id="desc" name="desc" required><br><br>
+                        <label for="longerDesc">Längre Beskrivning:</label><br>
+                        <textarea id="longerDesc" name="longerDesc" required></textarea><br><br>
+                        <label for="price">Pris:</label><br>
+                        <input type="number" id="price" name="price" required><br><br>
+                        <label for="rating">Rating:</label><br>
+                        <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" required><br><br>
+                        <label for="image">Bild URL:</label><br>
+                        <input type="text" id="image" name="image" required><br><br>
+                        <button type="submit">Lägg till produkt</button><br><br><br>
+                    </form>
+            </section>
+            <section class="admin__form-container">
+                <h2 class="profile-h2">Ändra Pris</h2>
+                <form class="admin__form" id="adminForm">
+                    <label for="changeProductId">ID av produkt att byta pris på:</label><br>
+                    <input type="number" id="changeProductId" name="changeProductId" required><br><br>
+                    <label for="newPrice">Ny Pris:</label><br>
+                    <input type="number" id="newPrice" name="newPrice" required><br><br>
+                    <button type="submit">Ändra till ny pris</button><br><br><br>
+                </form>
+            </section>
+            <section class="admin__form-container">
+                <h2 class="profile-h2">Ta bort produkt</h2>
+                <form class="admin__form" id="adminForm">
+                    <label for="removeProductId">Produkt-ID att ta bort:</label><br>
+                    <input type="number" id="removeProductId" name="removeProductId" required><br><br>
+                    <button type="submit">Ta Bort Produkt</button>
+                </form>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
