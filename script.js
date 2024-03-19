@@ -9,11 +9,13 @@ async function getApi(url) {
 }
 
 async function showCoffee() {
-    const kaffe = await getApi('https://santosnr6.github.io/Data/airbeanproducts.json');
+    /*const kaffe = await getApi('https://santosnr6.github.io/Data/airbeanproducts.json');*/
+    const storedCoffees = adminCoffee();
     const menyRef = document.querySelector('.meny__overview');
     menyRef.innerHTML = '';
 
-    kaffe.menu.forEach(coffee => {
+    /*kaffe.menu.forEach(coffee => {*/
+    storedCoffees.forEach(coffee => {
         const coffeeArticle = document.createElement('article');
         coffeeArticle.classList.add('meny__article');
         const coffeeSection = document.createElement('section');
