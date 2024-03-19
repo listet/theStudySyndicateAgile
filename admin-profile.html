@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="./admin-profile.css">
+    <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="burger.css" />
 </head>
@@ -49,41 +50,41 @@
         <section class="admin__container" id="adminContainer">
 
             <section class="admin__form-container">
-                <h3 class="profile-h2">Lägg till ny produkt</h2>
+                <h3 class="profile-h3">Lägg till ny produkt</h3>
                     <form class="admin__form" id="adminForm">
-                        <label for="id">ID:</label><br>
-                        <input type="number" id="id" name="id" required><br><br>
-                        <label for="title">Produktnamn:</label><br>
-                        <input type="text" id="title" name="title" required><br><br>
-                        <label for="desc">Kort Beskrivning:</label><br>
-                        <input type="text" id="desc" name="desc" required><br><br>
-                        <label for="longerDesc">Längre Beskrivning:</label><br>
-                        <textarea id="longerDesc" name="longerDesc" required></textarea><br><br>
-                        <label for="price">Pris:</label><br>
-                        <input type="number" id="price" name="price" required><br><br>
-                        <label for="rating">Rating:</label><br>
-                        <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" required><br><br>
-                        <label for="image">Bild URL:</label><br>
-                        <input type="text" id="image" name="image" required><br><br>
-                        <button type="submit">Lägg till produkt</button><br><br><br>
+                        <label class="label" for="id">ID:</label><br>
+                        <input class="input__field" type="number" id="id" name="id" required><br><br>
+                        <label class="label" for="title">Produktnamn:</label><br>
+                        <input class="input__field" type="text" id="title" name="title" required><br><br>
+                        <label class="label" for="desc">Kort Beskrivning:</label><br>
+                        <input class="input__field" type="text" id="desc" name="desc" required><br><br>
+                        <label class="label" for="longerDesc">Längre Beskrivning:</label><br>
+                        <textarea class="input__field" id="longerDesc" name="longerDesc" required></textarea><br><br>
+                        <label class="label" for="price">Pris:</label><br>
+                        <input class="input__field" type="number" id="price" name="price" required><br><br>
+                        <label class="label" for="rating">Rating:</label><br>
+                        <input class="input__field" type="number" id="rating" name="rating" step="0.1" min="0" max="5" required><br><br>
+                        <label class="label" for="image">Bild URL:</label><br>
+                        <input class="input__field" type="text" id="image" name="image" required><br><br>
+                        <button class="profile__btn" type="submit">Lägg till produkt</button>
                     </form>
             </section>
             <section class="admin__form-container">
-                <h2 class="profile-h2">Ändra Pris</h2>
+                <h3 class="profile-h3">Ändra Pris</h3>
                 <form class="admin__form" id="adminForm">
-                    <label for="changeProductId">ID av produkt att byta pris på:</label><br>
-                    <input type="number" id="changeProductId" name="changeProductId" required><br><br>
-                    <label for="newPrice">Ny Pris:</label><br>
-                    <input type="number" id="newPrice" name="newPrice" required><br><br>
-                    <button type="submit">Ändra till ny pris</button><br><br><br>
+                    <label class="label" for="changeProductId">ID av produkt att byta pris på:</label><br>
+                    <input class="input__field" type="number" id="changeProductId" name="changeProductId" required><br><br>
+                    <label class="label" for="newPrice">Ny Pris:</label><br>
+                    <input class="input__field" type="number" id="newPrice" name="newPrice" required><br><br>
+                    <button class="profile__btn" type="submit">Ändra till ny pris</button>
                 </form>
             </section>
             <section class="admin__form-container">
-                <h2 class="profile-h2">Ta bort produkt</h2>
+                <h3 class="profile-h3">Ta bort produkt</h3>
                 <form class="admin__form" id="adminForm">
-                    <label for="removeProductId">Produkt-ID att ta bort:</label><br>
-                    <input type="number" id="removeProductId" name="removeProductId" required><br><br>
-                    <button type="submit">Ta Bort Produkt</button>
+                    <label class="label" for="removeProductId">Produkt-ID att ta bort:</label><br>
+                    <input class="input__field" type="number" id="removeProductId" name="removeProductId" required><br><br>
+                    <button class="profile__btn" type="submit">Ta Bort Produkt</button>
                 </form>
             </section>
 

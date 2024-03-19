@@ -15,7 +15,7 @@
     flex-direction: column;
     margin: 0 auto;
     border-bottom: 16px;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: .5rem;
     border-radius: 3px;
     background-color: var(--Airbean-pink);
     max-width: 341px;
@@ -24,5 +24,42 @@
 }
 
 .admin__form-container {
-    
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(47, 41, 38, 0.2);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.label {
+    font-family: "Work Sans", sans-serif;
+    color: var(--Airbean-brown);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 38px;
+    color: var(--Airbean-brown);
+}
+
+.profile__btn {
+    align-self: center;
+    padding: .5rem .8rem .5rem .8rem;
+    border-radius: 50px;
+    border: 0;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--Airbean-brown);
+    color: var(--Airbean-pink);
+}
+
+.profile__btn:hover {
+    cursor: pointer;
 }
