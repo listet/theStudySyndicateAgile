@@ -182,3 +182,49 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 
 ### Övrigt
 Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
+
+## Närvarande 19/3 daily scrum
+* Albin
+* Ida
+* Lisa
+* Victor
+* Alistair
+* 
+
+  Vad har ni gjort igår, vad ska ni göra idag, några hinder?
+
+## Albin
+Var och en svarar på frågorna nedan, 1 person antecknar
+* Började med orderhisorik, ploca isär, la in varukorg
+* Merga, orderhistorik
+* Orderhistorik behövs plocka isär
+
+### Ida
+* Fxade login html cursor pointer, slog samman styles och style, började lite med responsiv för desktop
+* Börjar med respnsiv för dekstop varianten
+* Nope inga hinder
+
+### Lisa
+* Började med registrera kund, skissa i figma för knappen, 
+* Forstätter me registrera kund sida
+* Inga hinder
+
+### Victor
+* Börjat med profil js
+* Ska fortsätta idag med profil js
+* 
+
+## Alistair
+* Titta på funktionallitet, göra admin sida
+* Profil sida för admin
+* 
+
+
+## Miklos
+* 
+* 
+* 
+
+
+### Övrigt
+Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
