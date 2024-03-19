@@ -38,7 +38,12 @@
             </button>
         </header>
         <section class="profile__person-info">
-            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar">
+            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar" id="image">
+            <div class="profile__person-info-btn-group">
+                <input id="imageInput" type="file" accept="image/*" style="display: none;">
+                <button class="profile__person-info-btn" id="changeButton">Change Image</button>
+                <button class="profile__person-info-btn">Ändra lösenord</button>
+            </div>
             <h1 class="profile__person-info-name">Sixten Kaffelövér</h1>
             <p class="profile__person-info-email">sixten.kaffelover@zocom.se</p>
         </section>
@@ -71,6 +76,8 @@
             </aside>
         </section>
     </main>
+
+    <script src="./profile.js"></script>
 </body>
 
 </html>
