@@ -1,4 +1,4 @@
-export async function getApi(url) {
+async function getApi(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -11,6 +11,7 @@ export async function getApi(url) {
 async function showCoffee() {
     const kaffe = await getApi('https://santosnr6.github.io/Data/airbeanproducts.json');
     const menyRef = document.querySelector('.meny__overview');
+    console.log(kaffe);
     menyRef.innerHTML = '';
 
     kaffe.menu.forEach(coffee => {
@@ -30,11 +31,16 @@ async function showCoffee() {
         pRef.classList.add('meny__info');
         const price = document.createElement('h2');
         price.classList.add('meny__subtitle');
+        const img = document.createElement('img');
+        img.src = coffee.image;
+        img.alt = coffee.title;
+        img.classList.add('meny__img');
 
         title.innerHTML = coffee.title;
         pRef.innerHTML = coffee.desc;
         price.innerHTML = coffee.price + ' kr';
 
+        coffeeSection.appendChild(img);
         coffeeSection.appendChild(button);
         detailSection.appendChild(title);
         detailSection.appendChild(pRef);
