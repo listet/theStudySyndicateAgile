@@ -103,7 +103,6 @@ function removeProduct(event) {
     const productId = parseInt(document.getElementById('removeProductId').value);
 
     removeProductById(productId);
-    // No need to updateAdminCoffee here, as removeProductById already updates localStorage
 
     event.target.reset();
 }
@@ -112,8 +111,8 @@ function removeProduct(event) {
 function removeProductById(id) {
     const products = adminCoffee();
     const updatedProducts = products.filter(product => product.id !== id);
-    localStorage.removeItem('adminCoffee'); // Remove the entire 'adminCoffee' item from localStorage
-    updateAdminCoffee(updatedProducts); // Update localStorage with the filtered products array
+    localStorage.removeItem('adminCoffee');
+    updateAdminCoffee(updatedProducts);
 }
 /*const products = adminCoffee().filter(product => product.id !== id);
 localStorage.setItem('adminCoffee', JSON.stringify(products));
@@ -135,11 +134,11 @@ function changeProductPriceById(id, newPrice) {
     const products = adminCoffee();
     const updatedProducts = products.map(product => {
         if (product.id === id) {
-            product.price = newPrice; // Update the price of the product
+            product.price = newPrice;
         }
         return product;
     });
-    localStorage.setItem('adminCoffee', JSON.stringify(updatedProducts)); // Update localStorage with the updated products array
+    localStorage.setItem('adminCoffee', JSON.stringify(updatedProducts));
 }
 
 document.addEventListener('DOMContentLoaded', function () {
