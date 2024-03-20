@@ -74,6 +74,7 @@
         </div>
         <div id="formContainerRegister">
             <section class="form__container">
+                <h4 class="error__msg" id="errorMsg"></h4>
                 <section class="login__content-h1-text">
                     <img src="./Assets/logo-sml.svg" alt="logo"> <br>
                     <h1 class="login__h1">Välkommen till AirBean-familjen!</h1> <br>
@@ -82,18 +83,18 @@
                 <section class="login__container-form">
                     <form>
                         <div class="input-section">
-                            <label class="input__label" for="registeName">Namn</label><br>
+                            <label class="input__label" for="registerName">Namn</label><br>
                             <input class="input__field" id="registerName" type="text" placeholder="Skriv namn"><br><br>
-                            <label class="input__label" for="registeEmail">Epost</label><br>
+                            <label class="input__label" for="registerEmail">Epost</label><br>
                             <input class="input__field" id="registerEmail" type="email"
+                                placeholder="skriv emailadress..."><br><br>
+                            <label class="input__label" for="registerPassword">Löseord</label><br>
+                            <input class="input__field" id="registerPassword" type="password"
                                 placeholder="skriv lösenord..."><br><br>
-                            <label class="input__label" for="registePassword">Löseord</label><br>
-                            <input class="input__field" id="registePassword" type="password"
-                                placeholder="skriv lösenord..."><br><br>
-                            <label class="input__label" for="registePassword">Löseord igen</label><br>
-                            <input class="input__field" id="registePasswordAgain" type="password"
+                            <label class="input__label" for="registerPassword">Löseord igen</label><br>
+                            <input class="input__field" id="registerPasswordAgain" type="password"
                                 placeholder="skriv ditt lösenord igen..."><br><br>
-                            <input id="gdprCheckbox" type="checkbox">
+                            <input id="gdprCheckboxRegister" type="checkbox">
                             <label class="input__label" for="gdprCheckbox">GDPR Ok!</label><br><br>
                         </div>
                         <div class="login__btn-container">

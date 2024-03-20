@@ -128,6 +128,13 @@ input[type="checkbox"]:checked {
     margin-left: 10rem;
 }
 
+.error__msg {
+    color: red;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .register__btn-user {
     width: 70%;
     margin-left: 2.5rem;

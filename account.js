@@ -68,8 +68,116 @@ function initContentRegister() {
     console.log('registerForm')
     document.querySelector('#formContainerLogin').classList.add('d-none');
     document.querySelector('#formContainerRegister').classList.remove('d-none');
+
+    let regBtn = document.querySelector('#RegisterUserBtn');
+    regBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        validateRegistration(event)
+    });
 }
 
-// function - getUsers
+function registerUserToLocal(username, email, password) {
+    let existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    // Kollar om user eller email redan finns
+    if (existingUsers.some(users => users.username === username)) {
+        return 'Username already exists.';
+    }
+    if (existingUsers.some(user => user.email === email)) {
+        return 'Email already exists.';
+    }
+    // Lägger till user
+    existingUsers.push({ username, email, password });
+    // sparar i local storage
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+}
 
-// function - addUser
+async function validateRegistration(event) {
+    event.preventDefault();
+
+    try {
+        let username = document.querySelector('#registerName').value;
+        let email = document.querySelector('#registerEmail').value;
+        let password = document.querySelector('#registerPassword').value;
+        let passwordAgain = document.querySelector('#registerPasswordAgain').value;
+        let errorMsg = document.querySelector('#errorMsg');
+        let passwordRegex = /^(?=.*[a-ö])(?=.*[A-Ö])(?=.*\d).{8,}$/;
+        const gdprCheckbox = document.querySelector('#gdprCheckboxRegister');
+        const userData = await fetchUserData();
+
+        if (username.length < 6 || username.length > 20) {
+            throw {
+                'nodeRef': document.querySelector('#registerName'),
+                'msg': 'Användarnamnet måste vara mellan 6 och 20 tecken långt.'
+            };
+        }
+
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            throw {
+                'nodeRef': document.querySelector('#registerEmail'),
+                'msg': 'Invalid email address.'
+            };
+        }
+        if (password.length < 8) {
+            throw {
+                'nodeRef': document.querySelector('#registerPassword'),
+                'msg': 'Lösenordet måste vara minst 8 tecken långt.'
+            };
+        }
+
+        if (!passwordRegex.test(password)) {
+            throw {
+                'nodeRef': document.querySelector('#registerPassword'),
+                'msg': 'Lösenordet måste både innehålla stora och små bokstäver samt minst en siffra.'
+            };
+        }
+
+        if (password !== passwordAgain) {
+            throw {
+                'nodeRef': document.querySelector('#registerPasswordAgain'),
+                'msg': 'Lösenordet matchar inte.'
+            }
+        }
+
+        // Check if the username already exists
+        if (userData.users.some(user => user.username === username)) {
+            throw {
+                'nodeRef': document.querySelector('#registerName'),
+                'msg': 'username already exists.'
+            };
+        }
+
+        // Check if the email already exists
+        if (userData.users.some(user => user.email === email)) {
+            throw {
+                'nodeRef': document.querySelector('#registerEmail'),
+                'msg': 'email already exists.'
+            };
+        }
+
+        if (!gdprCheckbox.checked) {
+            throw {
+                'nodeRef': document.querySelector('#gdprCheckboxRegister'),
+                'msg': 'Checkboxen måste vara icheckad.'
+            };
+        }
+
+
+        const registrationError = registerUserToLocal(username, email, password);
+        if (registrationError) {
+            throw {
+                'nodeRef': document.querySelector('#registerName'), // You can choose to focus on username field or email field
+                'msg': registrationError
+            };
+        }
+
+        console.log('success!')
+        errorMsg.innerHTML = '';
+        window.location.href = 'profile.html';
+    } catch (error) {
+        if (error.nodeRef) {
+            error.nodeRef.focus();
+        }
+        console.log(error);
+        errorMsg.textContent = error.msg;
+    }
+}
