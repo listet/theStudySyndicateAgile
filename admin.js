@@ -16,7 +16,7 @@ async function getApi(url) {
     }
 }
 
-
+//get coffees from api and save as data
 async function initializeAdminCoffee() {
     try {
         const url = 'https://santosnr6.github.io/Data/airbeanproducts.json';
@@ -28,29 +28,39 @@ async function initializeAdminCoffee() {
     }
 }
 
-
-function adminCoffee() {
+//get all coffees stored in localstorage
+export function adminCoffee() {
     const storedCoffees = localStorage.getItem('adminCoffee');
     return storedCoffees ? JSON.parse(storedCoffees) : [];
 }
 
-
-function updateAdminCoffee(coffees) {
-    localStorage.setItem('adminCoffee', JSON.stringify(coffees));
+//update adminCoffee with new data
+function updateAdminCoffee(products) {
+    console.log('Updating admin coffee in localStorage:', products);
+    localStorage.setItem('adminCoffee', JSON.stringify(products));
+    console.log('Admin coffee updated in localStorage.', products);
 }
 
-
+//add a new product
 function addNewProduct(event) {
     event.preventDefault();
 
-    const id = parseInt(document.getElementById('id').value);
-    const title = document.getElementById('title').value;
-    const desc = document.getElementById('desc').value;
-    const longerDesc = document.getElementById('longerDesc').value;
-    const price = parseFloat(document.getElementById('price').value);
-    const rating = parseFloat(document.getElementById('rating').value);
-    const image = document.getElementById('image').value;
+    console.log('Add new product function called');
 
+    const id = parseInt(document.getElementById('id').value);
+    console.log('ID:', id);
+    const title = document.getElementById('title').value;
+    console.log('title:', title);
+    const desc = document.getElementById('desc').value;
+    console.log('desc:', desc);
+    const longerDesc = document.getElementById('longerDesc').value;
+    console.log('longerdesc:', longerDesc);
+    const price = parseFloat(document.getElementById('price').value);
+    console.log('price:', price);
+    const rating = parseFloat(document.getElementById('rating').value);
+    console.log('rating:', rating);
+    const image = document.getElementById('image').value;
+    console.log('image:', image);
     const newProduct = {
         id: id,
         title: title,
@@ -60,36 +70,54 @@ function addNewProduct(event) {
         rating: rating,
         image: image
     };
-
+    console.log('New Product:', newProduct);
     addProductToList(newProduct);
+
+    updateAdminCoffee(adminCoffee()); //uppdatera adminCoffee in localstorage
 
     event.target.reset();
 }
 
 
-function addProductToList(product) {
-    const products = adminCoffee();
-    products.push(product);
-    updateAdminCoffee(products);
+function addProductToList(newProduct) {
+    let products = adminCoffee();
+
+    products.push(newProduct);
+
+    localStorage.setItem('adminCoffee', JSON.stringify(products));
 }
+//lägg till ny produkt, localstorage uppdateras i adNewProduct
+/*function addProductToList(product) {
+    console.log('Adding product to list:', product);
+    const products = adminCoffee();
+    console.log('Existing products:', products);
+    products.push(product);
+    console.log('Updated products:', products);
+    updateAdminCoffee(products);
+}*/
 
-
+//ta bort en produkt
 function removeProduct(event) {
     event.preventDefault();
 
     const productId = parseInt(document.getElementById('removeProductId').value);
 
     removeProductById(productId);
+    // No need to updateAdminCoffee here, as removeProductById already updates localStorage
 
     event.target.reset();
 }
 
-
-
+//tar bort en produkt från localstorage
 function removeProductById(id) {
-    const products = adminCoffee().filter(product => product.id !== id);
-    updateAdminCoffee(products);
+    const products = adminCoffee();
+    const updatedProducts = products.filter(product => product.id !== id);
+    localStorage.removeItem('adminCoffee'); // Remove the entire 'adminCoffee' item from localStorage
+    updateAdminCoffee(updatedProducts); // Update localStorage with the filtered products array
 }
+/*const products = adminCoffee().filter(product => product.id !== id);
+localStorage.setItem('adminCoffee', JSON.stringify(products));
+updateAdminCoffee(products);*/
 
 
 function changeProductPrice(event) {
@@ -99,23 +127,24 @@ function changeProductPrice(event) {
     const newPrice = parseFloat(document.getElementById('newPrice').value);
 
     changeProductPriceById(productId, newPrice);
-
     event.target.reset();
 }
 
 
 function changeProductPriceById(id, newPrice) {
     const products = adminCoffee();
-    const index = products.findIndex(product => product.id === id);
-    if (index !== -1) {
-        products[index].price = newPrice;
-        updateAdminCoffee(products);
-    }
+    const updatedProducts = products.map(product => {
+        if (product.id === id) {
+            product.price = newPrice; // Update the price of the product
+        }
+        return product;
+    });
+    localStorage.setItem('adminCoffee', JSON.stringify(updatedProducts)); // Update localStorage with the updated products array
 }
 
-
-document.getElementById('adminFormAdd').addEventListener('submit', addNewProduct);
-document.getElementById('adminFormChangePrice').addEventListener('submit', changeProductPrice);
-document.getElementById('adminFormRemove').addEventListener('submit', removeProduct);
-
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('adminFormAdd').addEventListener('submit', addNewProduct);
+    document.getElementById('adminFormChangePrice').addEventListener('submit', changeProductPrice);
+    document.getElementById('adminFormRemove').addEventListener('submit', removeProduct);
+});
 
