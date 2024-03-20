@@ -536,4 +536,39 @@
         justify-content: space-around;
         align-items: center;
     }
+    .nav__webpage {
+        width: 100%;
+        height:150px;
+        z-index: 10;
+        background: var(--Airbean-brown);
+        color: #ffffff;
+    }
+
+    .nav__webpage ul {
+        list-style: none;
+    }
+
+    .nav__list {
+        display: flex;
+        height: 150px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "PT Serif", serif;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .nav__list a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .nav__list-bag {
+        color: #ffffff;
+        width: 20px;
+    }
+
+    .nav__list-logo {
+        width:100px;
+    }
   }
