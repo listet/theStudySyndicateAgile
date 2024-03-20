@@ -411,7 +411,7 @@
         width: 100%;
     }
 
-    .landningssida__webpage-main {
+    .landningssida__webpage-main, .landningssida__webpage-footer {
         display: block;
         position: relative;
         width: 1400px;
@@ -504,5 +504,36 @@
         font-weight: 400;
         align-self: flex-end;
         margin-top: 2rem;
+    }
+
+    .landningssida__webpage-footer {
+        background-color: var(--Airbean-brown);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: #ffffff;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    .landningssida__webpage-footer h3 {
+        margin: 2rem 0;
+        font-weight: 700;
+    }
+
+    .landningssida__webpage-footer ul {
+        list-style: none;
+        margin: 1rem 0;
+    }
+
+    .landningssida__webpage-footer ul li {
+        margin: .5rem 0;
+    }
+
+    .landingssida__socialmedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
   }
