@@ -183,6 +183,9 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 ### Övrigt
 Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
 
+____________________
+
+
 ## Närvarande 19/3 daily scrum
 * Albin
 * Ida
@@ -190,8 +193,6 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 * Victor
 * Alistair
 * 
-
-  Vad har ni gjort igår, vad ska ni göra idag, några hinder?
 
 ## Albin
 Var och en svarar på frågorna nedan, 1 person antecknar
@@ -219,11 +220,53 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 * Profil sida för admin
 * 
 
+## Miklos
+*
+*
+*
+
+___________________
+
+
+## Närvarande 20/3 daily scrum
+* Albin
+* Ida
+* Lisa
+* Victor
+* Alistair
+* Miklos
+
+
+## Albin
+Var och en svarar på frågorna nedan, 1 person antecknar
+* Kör på med beräkna drönare leverans
+* Fortsätter med samma
+* Inga hinder
+
+### Ida
+* Layouten för dekstop, navigerings delen
+* Fortsätter med samma 
+* Fastnat lite men löser de!
+
+### Lisa
+*  Börjat med registrera user, formulär för login
+* Fortsätter 
+* krånglade med d-none med lösde de
+
+### Victor
+* JObbat med profil js, gjort klart profilbilden som ska bytas
+* Ska fortsätta idag med profil js 
+* Inga hinder
+
+## Alistair
+* Gjort klart admin sida formulär
+* Fortsätter med js delen
+* Inga hinder
 
 ## Miklos
-* 
-* 
-* 
+* Jobbar med varukorgen js, 
+* Kör vidare med varukorgen js 
+* Lite problem med Localstorage och lite hinder med js
 
 
 ### Övrigt
