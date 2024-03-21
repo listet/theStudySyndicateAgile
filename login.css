@@ -12,14 +12,13 @@
 
 .mobile__wrapper-dark {
     max-width: 375px;
-    height: 667px;
+    height: 100%;
     margin: 0 auto;
-
     background-color: var(--Airbean-brown);
 }
 
 .form__container {
-    height: 566px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -60,7 +59,7 @@
     font-family: "Work Sans", sans-serif;
     color: var(--Airbean-brown);
     font-size: 12px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 .input__field {
@@ -95,14 +94,12 @@ input[type="checkbox"]:checked {
 }
 
 .login__btn-container {
-    display: flex;
-    justify-content: center;
     padding-top: 2rem;
 }
 
 .login__btn {
-    align-self: center;
-    width: 248px;
+    position: absolute;
+    width: 45%;
     height: 55px;
     border-radius: 50px;
     border: 0;
@@ -111,5 +108,44 @@ input[type="checkbox"]:checked {
     font-weight: 700;
     background-color: var(--Airbean-brown);
     color: var(--Airbean-pink);
+    white-space: normal;
+    cursor: pointer;
+}
+
+.login__btn-white {
+    position: relative;
+    width: 45%;
+    height: 55px;
+    border-radius: 50px;
+    font-family: "Work Sans", sans-serif;
+    background-color: white;
+    color: var(--Airbean-brown);
+    white-space: normal;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    border: 2px solid var(--Airbean-brown);
+    margin-left: 10rem;
+}
+
+.error__msg {
+    color: red;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register__btn-user {
+    width: 70%;
+    margin-left: 2.5rem;
+    height: 55px;
+    border-radius: 50px;
+    border: 0;
+    font-family: "PT Serif", serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--Airbean-brown);
+    color: var(--Airbean-pink);
+    white-space: normal;
     cursor: pointer;
 }
