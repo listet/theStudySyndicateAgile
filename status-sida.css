@@ -60,3 +60,9 @@
 .lighter {
     font-weight: lighter;
 }
+
+@media only screen and (min-width: 1400px) { 
+    .order { 
+        width:  1400px;
+    }
+}
