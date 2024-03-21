@@ -182,3 +182,92 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 
 ### Övrigt
 Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
+
+____________________
+
+
+## Närvarande 19/3 daily scrum
+* Albin
+* Ida
+* Lisa
+* Victor
+* Alistair
+* 
+
+## Albin
+Var och en svarar på frågorna nedan, 1 person antecknar
+* Började med orderhisorik, ploca isär, la in varukorg
+* Merga, orderhistorik
+* Orderhistorik behövs plocka isär
+
+### Ida
+* Fxade login html cursor pointer, slog samman styles och style, började lite med responsiv för desktop
+* Börjar med respnsiv för dekstop varianten
+* Nope inga hinder
+
+### Lisa
+* Började med registrera kund, skissa i figma för knappen, 
+* Forstätter me registrera kund sida
+* Inga hinder
+
+### Victor
+* Börjat med profil js
+* Ska fortsätta idag med profil js
+* 
+
+## Alistair
+* Titta på funktionallitet, göra admin sida
+* Profil sida för admin
+* 
+
+## Miklos
+*
+*
+*
+
+___________________
+
+
+## Närvarande 20/3 daily scrum
+* Albin
+* Ida
+* Lisa
+* Victor
+* Alistair
+* Miklos
+
+
+## Albin
+Var och en svarar på frågorna nedan, 1 person antecknar
+* Kör på med beräkna drönare leverans
+* Fortsätter med samma
+* Inga hinder
+
+### Ida
+* Layouten för dekstop, navigerings delen
+* Fortsätter med samma 
+* Fastnat lite men löser de!
+
+### Lisa
+*  Börjat med registrera user, formulär för login
+* Fortsätter 
+* krånglade med d-none med lösde de
+
+### Victor
+* JObbat med profil js, gjort klart profilbilden som ska bytas
+* Ska fortsätta idag med profil js 
+* Inga hinder
+
+## Alistair
+* Gjort klart admin sida formulär
+* Fortsätter med js delen
+* Inga hinder
+
+## Miklos
+* Jobbar med varukorgen js, 
+* Kör vidare med varukorgen js 
+* Lite problem med Localstorage och lite hinder med js
+
+
+### Övrigt
+Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
