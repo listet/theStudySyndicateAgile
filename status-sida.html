@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./status-sida.css">
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
     <main class="order">
+        <nav class="nav__webpage">
+            <section>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html"><img class="nav__list-logo" src="/Assets/A-logo.svg" alt="logo"></a></li>
+                    <li class="nav__item"><a href="./meny.html">Meny</a></li>
+                    <li class="nav__item"><a href="./about.html">Vårt Kaffe</a></li>
+                    <li class="nav__item"><a href="./profile.html">Min Profil</a></li>
+                    <li class="nav__item"><a href="./status-sida.html">Orderstatus</a></li>
+                    <button id="basketBtn" class="header__button header__button--basket">
+                      <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+                    </button>
+                </ul>
+            </section>
+        </nav>
         <section class="order__container">
             <p class="order__number"><span class="lighter">Ordernummer</span> #12DV23F</p>
             <img src="./Assets/drone.svg" alt="drone img" class="order__drone-logo">
@@ -18,6 +33,45 @@
             <button class="delivery__btn"><a href="index.html" class="delivery__btn-link">Ok, cool!</a></button>
         </section>
     </main>
+    <footer class="landningssida__webpage-footer">
+        <section>
+            <h3>AirBeans</h3>
+            <ul>
+                <li>Om oss</li>
+                <li>Bli en av oss</li>
+                <li>Hitta osss</li>
+                <li>Press</li>
+                <li>Kontakt</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Produkt</h3>
+            <ul>
+                <li>Vårt kaffe</li>
+                <li>Kaffe till hemmet</li>
+                <li>Catering</li>
+                <li>Leverans</li>
+                <li>Presentkort</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Information</h3>
+            <ul>
+                <li>Näring och allergener</li>
+                <li>Privacy Notice</li>
+                <li>Cookie Policy</li>
+                <li>Livsmedelssäkerhet</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Följ oss</h3>
+            <section class="landingssida__socialmedia">
+                <img src="./Assets/mingcute_twitter-line.svg" alt="twitter logo">
+                <img src="./Assets/mdi_instagram.svg" alt="instagram logo">
+                <img src="./Assets/Vector 2.svg" alt="facebook logo">
+            </section>
+        </section>
+    </footer>
 </body>
 
 </html>

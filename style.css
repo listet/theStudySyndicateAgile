@@ -684,4 +684,11 @@
         width: 100px;
         height: 100px;
     }
+    .varukorg-section {
+        position: relative;
+    }
+    .varukorg {
+        right: 4.5rem;
+        top: -2.5rem;
+    }
   }
