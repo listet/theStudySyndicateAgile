@@ -57,9 +57,9 @@ basketBtn.addEventListener('click', () => {
 });
 
 varukorg.addEventListener('click', (event) => {
-  if (event.target === varukorg) {
+    if (event.target === varukorg) {
     varukorg.classList.add('d-none');
-  }
+    }
 });
 
 
