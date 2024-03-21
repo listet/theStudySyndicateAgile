@@ -78,12 +78,12 @@ function initContentRegister() {
 
 function registerUserToLocal(username, email, password) {
     let existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    // Kollar om user eller email redan finns
+    // Kollar om user eller email redan finns i localStorage
     if (existingUsers.some(users => users.username === username)) {
-        return 'Username already exists.';
+        return 'Användarnamnet existerar redan.';
     }
     if (existingUsers.some(user => user.email === email)) {
-        return 'Email already exists.';
+        return 'Emailadressen existerar redan.';
     }
     // Lägger till user
     existingUsers.push({ username, email, password });
@@ -106,77 +106,55 @@ async function validateRegistration(event) {
 
         if (username.length < 6 || username.length > 20) {
             throw {
-                'nodeRef': document.querySelector('#registerName'),
                 'msg': 'Användarnamnet måste vara mellan 6 och 20 tecken långt.'
             };
         }
-
         if (!/\S+@\S+\.\S+/.test(email)) {
             throw {
-                'nodeRef': document.querySelector('#registerEmail'),
-                'msg': 'Invalid email address.'
+                'msg': 'Ogiltig e-postadress.'
             };
         }
         if (password.length < 8) {
             throw {
-                'nodeRef': document.querySelector('#registerPassword'),
                 'msg': 'Lösenordet måste vara minst 8 tecken långt.'
             };
         }
-
         if (!passwordRegex.test(password)) {
             throw {
-                'nodeRef': document.querySelector('#registerPassword'),
                 'msg': 'Lösenordet måste både innehålla stora och små bokstäver samt minst en siffra.'
             };
         }
-
         if (password !== passwordAgain) {
             throw {
-                'nodeRef': document.querySelector('#registerPasswordAgain'),
                 'msg': 'Lösenordet matchar inte.'
             }
         }
-
-        // Check if the username already exists
         if (userData.users.some(user => user.username === username)) {
             throw {
-                'nodeRef': document.querySelector('#registerName'),
-                'msg': 'username already exists.'
+                'msg': 'Användarnamnet existerar redan.'
             };
         }
-
-        // Check if the email already exists
         if (userData.users.some(user => user.email === email)) {
             throw {
-                'nodeRef': document.querySelector('#registerEmail'),
-                'msg': 'email already exists.'
+                'msg': 'Emailadressen existerar redan.'
             };
         }
-
         if (!gdprCheckbox.checked) {
             throw {
-                'nodeRef': document.querySelector('#gdprCheckboxRegister'),
                 'msg': 'Checkboxen måste vara icheckad.'
             };
         }
-
-
+        //Kallar på funktion RegisterUserToLocal för att gämföra användarnamn samt mail gentemot LocalStorage samt spara.
         const registrationError = registerUserToLocal(username, email, password);
         if (registrationError) {
             throw {
-                'nodeRef': document.querySelector('#registerName'), // You can choose to focus on username field or email field
                 'msg': registrationError
             };
         }
-
         console.log('success!')
         errorMsg.innerHTML = '';
         window.location.href = 'profile.html';
     } catch (error) {
-        if (error.nodeRef) {
-            error.nodeRef.focus();
-        }
         console.log(error);
         errorMsg.textContent = error.msg;
     }
