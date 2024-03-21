@@ -23,23 +23,23 @@ window.addEventListener('load', async () => {
             alert('Fylla i alla fält och markera gdpr-rutan.');
             return;
         }
+      
+            try {
+                const userData = await fetchUserData();
+                const user = userData.users.find(user => user.username === username && user.password === password);
 
-        try {
-            const userData = await fetchUserData();
-            const user = userData.users.find(user => user.username === username && user.password === password);
-
-            if (!user) {
-                alert('Ogiltig användernamn eller lösenord.');
-                return;
-            }
-            const role = user.role;
-            if (role === 'admin') {
-                window.location.href = 'profile.html' // ADMIN lägg till rätt html länk här!
-            } else {
-                window.location.href = 'profile.html' // USER lägg till rätt html länk här!
-            }
-        } catch (error) {
-            alert('Login misslyckades', error);
+                if (!user) {
+                    alert('Ogiltig användernamn eller lösenord.');
+                    return;
+                }
+                const role = user.role;
+                if (role === 'admin') {
+                    window.location.href = 'admin-profile.html' // ADMIN lägg till rätt html länk här!
+                } else {
+                    window.location.href = 'profile.html' // USER lägg till rätt html länk här!
+                }
+            } catch (error) {
+                alert('Login misslyckades', error);
         }
     });
 
