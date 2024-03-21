@@ -1,12 +1,12 @@
 'use strict'
 
+//kör igång hämtningen från apin om adminCoffee är tom
 document.addEventListener('DOMContentLoaded', function () {
     if (adminCoffee().length === 0) {
         initializeAdminCoffee();
     }
 });
 
-console.log('Initial localStorage data:', localStorage.getItem('adminCoffee'));
 
 async function getApi(url) {
     try {
@@ -18,51 +18,39 @@ async function getApi(url) {
     }
 }
 
-//get coffees from api and save as data
+//get coffees från api'n och spara som data.
 async function initializeAdminCoffee() {
     try {
         const url = 'https://santosnr6.github.io/Data/airbeanproducts.json';
         const data = await getApi(url);
-        console.log('Datan från APIn:', data);
         updateAdminCoffee(data.menu);
     } catch (error) {
         console.log(error);
     }
 }
 
-//get all coffees stored in localstorage
+//get alla coffees lagrad i localstorage
 export function adminCoffee() {
     const storedCoffees = localStorage.getItem('adminCoffee');
     return storedCoffees ? JSON.parse(storedCoffees) : [];
 }
 
-//update adminCoffee with new data
+//uppdatera adminCoffee med ny data
 function updateAdminCoffee(products) {
-    console.log('Updating admin coffee in localStorage:', products);
     localStorage.setItem('adminCoffee', JSON.stringify(products));
-    console.log('Admin coffee updated in localStorage.', products);
 }
 
-//add a new product
+//lägga till en ny produkt med samma nycklar som api'n
 function addNewProduct(event) {
     event.preventDefault();
 
-    console.log('Add new product function called');
-
     const id = parseInt(document.getElementById('id').value);
-    console.log('ID:', id);
     const title = document.getElementById('title').value;
-    console.log('title:', title);
     const desc = document.getElementById('desc').value;
-    console.log('desc:', desc);
     const longerDesc = document.getElementById('longerDesc').value;
-    console.log('longerdesc:', longerDesc);
     const price = parseFloat(document.getElementById('price').value);
-    console.log('price:', price);
     const rating = parseFloat(document.getElementById('rating').value);
-    console.log('rating:', rating);
     const image = document.getElementById('image').value;
-    console.log('image:', image);
     const newProduct = {
         id: id,
         title: title,
@@ -72,31 +60,17 @@ function addNewProduct(event) {
         rating: rating,
         image: image
     };
-    console.log('New Product:', newProduct);
     addProductToList(newProduct);
-
-    updateAdminCoffee(adminCoffee()); //uppdatera adminCoffee in localstorage
-
+    updateAdminCoffee(adminCoffee());
     event.target.reset();
 }
 
-
+//lägg till ny produkt, localstorage uppdateras i addNewProduct
 function addProductToList(newProduct) {
     let products = adminCoffee();
-
     products.push(newProduct);
-
     localStorage.setItem('adminCoffee', JSON.stringify(products));
 }
-//lägg till ny produkt, localstorage uppdateras i adNewProduct
-/*function addProductToList(product) {
-    console.log('Adding product to list:', product);
-    const products = adminCoffee();
-    console.log('Existing products:', products);
-    products.push(product);
-    console.log('Updated products:', products);
-    updateAdminCoffee(products);
-}*/
 
 //ta bort en produkt
 function removeProduct(event) {
