@@ -1,7 +1,9 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function () {
-    initializeAdminCoffee();
+    if (adminCoffee().length === 0) {
+        initializeAdminCoffee();
+    }
 });
 
 console.log('Initial localStorage data:', localStorage.getItem('adminCoffee'));
