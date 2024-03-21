@@ -1,4 +1,3 @@
-
 async function getApi(url) {
     try {
         const response = await fetch(url);
@@ -9,8 +8,6 @@ async function getApi(url) {
     }
 }
 
-
-
 import { adminCoffee } from './admin.js';
 
 async function showCoffee() {
@@ -18,7 +15,6 @@ async function showCoffee() {
     const storedCoffees = await adminCoffee();
     const menyRef = document.querySelector('.meny__overview');
 
-    console.log(kaffe);
     menyRef.innerHTML = '';
 
     if(menyRef) {
