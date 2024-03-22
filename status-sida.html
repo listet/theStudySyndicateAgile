@@ -30,10 +30,34 @@
             <p class="order__number"><span class="lighter">Ordernummer</span> #12DV23F</p>
             <img src="./Assets/drone.svg" alt="drone img" class="order__drone-logo">
             <h1 class="order__title">Din beställning är på väg!</h1>
-            <h3 class="order__delivery">13 <span class="lighter">minuter</span></h3>
+
+            <div class="countdown" id="countdown">
+                <div class="hidden">
+                    <h2 id="days"></h2>
+                    <small>Dagar</small>
+                </div>
+        
+                <div class="time">
+                    <h2 id="hours"></h2>
+                    <small>Timmar</small>
+                </div>
+        
+                <div class="time">
+                    <h2 id="minutes"></h2>
+                    <small>Minuter</small>
+                </div>
+        
+                <div class="time">
+                    <h2 id="seconds"></h2>
+                    <small>Sekunder</small>
+                </div>        
+            </div>
+
             <button class="delivery__btn"><a href="index.html" class="delivery__btn-link">Ok, cool!</a></button>
         </section>
     </main>
+
+    <script src="timer.js"></script>
     <footer class="landningssida__webpage-footer">
         <section>
             <h3>AirBeans</h3>
