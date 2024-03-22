@@ -268,6 +268,48 @@ Var och en svarar på frågorna nedan, 1 person antecknar
 * Kör vidare med varukorgen js 
 * Lite problem med Localstorage och lite hinder med js
 
+## Närvarande 21/3 daily scrum
+* Albin (På en intervju)
+* Ida
+* Lisa
+* Victor
+* Alistair
+* Miklos
+
+## Albin
+Var och en svarar på frågorna nedan, 1 person antecknar
+* 
+* 
+* 
+
+### Ida
+* Färdigt meny sidan och om oss på webben
+* Fortsätta med webben
+* Inga probelm
+
+### Lisa
+* Jobbat med registrera och gjort klart och ska merga
+* Kolla över buggfixar
+* Inga hinder
+
+### Victor
+* Jobbat med profil sida js
+* Jobba med fixa tillgänglighet 
+* Hade de svårt med js
+
+## Alistair
+* Funktionallitet med admin sidan, admin sidan funkar
+* Jobbar vidare, rensa och fixa lite i koden, merga
+* Hade hinder men löste det med jesper
+
+
+## Miklos
+* Fixade lite problem med varukorgen js
+* Fortsätter med samma grej
+* Lite hinder med js biten
+
 
 ### Övrigt
 Är det någon som behöver hjälp? Bestäm vem som hoppar in och stöttar
+
+____________________
