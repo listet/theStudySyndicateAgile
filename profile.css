@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "PT Serif", serif;
-    font-family: sans;
 }
 
 :root {
@@ -18,8 +17,11 @@
     margin: 0 auto;
     width: 375px;
     min-height: 700px;
-
     background-color: var(--Airbean-brown);
+}
+
+.profile__person-info-avatar {
+    width: 150px;
 }
 
 .profile__person-info {
@@ -29,8 +31,32 @@
     padding: 15px;
 }
 
+.profile__person-info-btn-group {
+    margin: 10px;
+}
+
+input[type='file'] {
+    color: transparent;
+    width: 100px;
+    height: 80px;
+}
+
+.profile__person-info-btn {
+    padding: 6px 8px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile__person-info-btn:hover {
+    opacity: 95%;
+    transform: scale(0.98);
+}
+
 .profile__person-info-name {
-    margin-top: 10px;
     margin-bottom: 5px;
     color: white;
 }
@@ -99,4 +125,11 @@
     font-weight: bold;
     font-family: "Work Sans", sans-serif;
     font-size: 14px;
+}
+
+@media only screen and (min-width: 1400px) { 
+    .profile {
+        width: 1400px;
+        padding: 3rem;  
+    }
 }
