@@ -64,6 +64,7 @@
     font-weight: lighter;
 }
 
+
 .countdown {
     display: flex;
     justify-content: center; /* Centrera tidselementen horisontellt */
@@ -81,3 +82,9 @@
 .hidden{
     display: none;
 } 
+@media only screen and (min-width: 1400px) { 
+    .order { 
+        width:  1400px;
+    }
+}
+

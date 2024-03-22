@@ -1,4 +1,4 @@
-export async function getApi(url) {
+async function getApi(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -8,12 +8,23 @@ export async function getApi(url) {
     }
 }
 
+import { adminCoffee } from './admin.js';
+
 async function showCoffee() {
-    const kaffe = await getApi('https://santosnr6.github.io/Data/airbeanproducts.json');
+    
+    const storedCoffees = await adminCoffee();
     const menyRef = document.querySelector('.meny__overview');
+
     menyRef.innerHTML = '';
 
-    kaffe.menu.forEach(coffee => {
+    if(menyRef) {
+        menyRef.innerHTML = '';
+    } else {
+        console.error('Element med class meny__overview hittades inte.');
+    }
+    
+    
+    storedCoffees.forEach(coffee => {
         const coffeeArticle = document.createElement('article');
         coffeeArticle.classList.add('meny__article');
         const coffeeSection = document.createElement('section');
@@ -30,11 +41,17 @@ async function showCoffee() {
         pRef.classList.add('meny__info');
         const price = document.createElement('h2');
         price.classList.add('meny__subtitle');
+        const img = document.createElement('img');
+        img.src = coffee.image;
+        img.alt = coffee.title;
+        img.classList.add('meny__img');
 
         title.innerHTML = coffee.title;
         pRef.innerHTML = coffee.desc;
         price.innerHTML = coffee.price + ' kr';
 
+        coffeeSection.appendChild(img);
+        console.log(coffeeSection);
         coffeeSection.appendChild(button);
         detailSection.appendChild(title);
         detailSection.appendChild(pRef);
@@ -83,3 +100,14 @@ function generateOrdernumber() {
 }
 
 // Behöver kalla på funktionen generateOrdernumber(); när man klickar på beställknappen
+/*async function getApi(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data; 
+    } catch (error) { 
+        console.log(error);
+    }
+}*/
+/*const kaffe = await getApi('https://santosnr6.github.io/Data/airbeanproducts.json');*/
+/*kaffe.menu.forEach(coffee => {*/

@@ -18,7 +18,6 @@
     margin: 0 auto;
     width: 375px;
     min-height: 700px;
-
     background-color: var(--Airbean-brown);
 }
 
@@ -99,4 +98,11 @@
     font-weight: bold;
     font-family: "Work Sans", sans-serif;
     font-size: 14px;
+}
+
+@media only screen and (min-width: 1400px) { 
+    .profile {
+        width: 1400px;
+        padding: 3rem;  
+    }
 }

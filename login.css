@@ -149,3 +149,21 @@ input[type="checkbox"]:checked {
     white-space: normal;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 1400px) { 
+    .mobile__wrapper-dark {
+        max-width: 1400px;
+        min-height: 1000px;
+    }
+
+    .form__container {
+        max-width: 50%;
+    }
+
+    .login__container-form {
+        margin: 0 auto;
+    }
+    .input__field {
+        width: 450px;
+    }
+}

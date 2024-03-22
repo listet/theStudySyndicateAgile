@@ -6,18 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landningssida</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./burger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div class="landningssida__wrapper">
-        <img src="./Assets/intro-graphic-left.svg" alt="background picture to the left with leaves">
+        <nav class="nav__webpage">
+            <section>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html"><img class="nav__list-logo" src="/Assets/A-logo.svg" alt="logo"></a></li>
+                    <li class="nav__item"><a href="./meny.html">Meny</a></li>
+                    <li class="nav__item"><a href="./about.html">Vårt Kaffe</a></li>
+                    <li class="nav__item"><a href="./profile.html">Min Profil</a></li>
+                    <li class="nav__item"><a href="./status-sida.html">Orderstatus</a></li>
+                    <button id="basketBtn" class="header__button header__button--basket">
+                      <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+                    </button>
+                </ul>
+            </section>
+        </nav>
+        <img class="landningssida__first-img" src="./Assets/intro-graphic-left.svg" alt="background picture to the left with leaves">
         <section class="logo__section">
             <a href="meny.html">
                 <img src="./Assets/airbean-landing.svg" alt="logo picture and text">
             </a>
         </section>
-        <img src="./Assets/intro-graphic-right.svg" alt="background picture to the right with leaves">
+        <img class="landningssida__second-img" src="./Assets/intro-graphic-right.svg" alt="background picture to the right with leaves">
     </div>
-</body>
 
+    <main class="landningssida__webpage-main">
+        <article class="landningssida__divided">
+            <section class="landningssida__left">
+                <h2 class="landningssida__subtitle">Det du behöver, minuter från din dörr...</h2>
+            </section>
+            <section class="landningssida__right">
+              <button class="landningssida__button-meny">Gå till <br>Kaffe-menyn</button>
+            </section>
+        </article>
+        <article class="landningssida__article-images">
+            <img class="landningssida__article-img" src="./Assets/coffee1.png" alt="a caffe latte with leafs on it">
+            <img class="landningssida__article-img" src="./Assets/coffee2.png" alt="coffee beans">
+            <img class="landningssida__article-img" src="./Assets/coffee3.png" alt="a coffee cup in nature">
+            <img class="landningssida__article-img" src="./Assets/coffee4.png" alt="a coffee cup with milk">
+        </article>
+        <article class="landningssida__divided">
+            <section class="landningssida__left">
+                <h2 class="landningssida__subtitle-uganda">Ett specialkaffe från Uganda</h2>
+                <p>Med smakrikt med toner av söt lakrits, mörk choklad & russin</p>
+                <button class="landningssida__button-more">Läs mer <img src="/Assets/Arrow-right.png" alt="an arrow pointing to the right"></button>
+            </section>
+            <section class="landningssida__right">
+              <img src="/Assets/ugandaCoffee.png" alt="A photo of a cup of coffee" class="uganda-img">
+            </section>
+        </article>
+    </main>
+    <footer class="landningssida__webpage-footer">
+        <section>
+            <h3>AirBeans</h3>
+            <ul>
+                <li>Om oss</li>
+                <li>Bli en av oss</li>
+                <li>Hitta osss</li>
+                <li>Press</li>
+                <li>Kontakt</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Produkt</h3>
+            <ul>
+                <li>Vårt kaffe</li>
+                <li>Kaffe till hemmet</li>
+                <li>Catering</li>
+                <li>Leverans</li>
+                <li>Presentkort</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Information</h3>
+            <ul>
+                <li>Näring och allergener</li>
+                <li>Privacy Notice</li>
+                <li>Cookie Policy</li>
+                <li>Livsmedelssäkerhet</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Följ oss</h3>
+            <section class="landingssida__socialmedia">
+                <img src="./Assets/mingcute_twitter-line.svg" alt="twitter logo">
+                <img src="./Assets/mdi_instagram.svg" alt="instagram logo">
+                <img src="./Assets/Vector 2.svg" alt="facebook logo">
+            </section>
+        </section>
+    </footer>
+<script src="script.js"></script>
+</body>
 </html>
