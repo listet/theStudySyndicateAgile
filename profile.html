@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="burger.css" />
+    <link rel="stylesheet" href="/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
+    <div class="mobile__wrapper mobile__wrapper-dark">
     <main class="profile">
         <header class="header__meny">
             <!-- Mobile nav -->
@@ -33,12 +42,77 @@
                             class="nav__mobile-menu-link">Orderstatus</a></li>
                 </ul>
             </nav>
-            <button id="basketBtn" class="header__button header__button--basket">
+            <nav class="nav__webpage">
+    <section>
+          <ul class="nav__list">
+              <li class="nav__item"><a href="./index.html"><img class="nav__list-logo" src="/Assets/A-logo.svg" alt="logo"></a></li>
+              <li class="nav__item"><a href="./meny.html">Meny</a></li>
+              <li class="nav__item"><a href="./about.html">Vårt Kaffe</a></li>
+              <li class="nav__item"><a href="./login.html">Min Profil</a></li>
+              <li class="nav__item"><a href="./status-sida.html">Orderstatus</a></li>
+              <button id="basketBtn" class="header__button header__button--basket">
+                <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+              </button>
+          </ul>
+      </section>
+  </nav>
+            <button id="basketBtn" class="header__button header__button--basket basketPhone">
                 <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
             </button>
+                <!-- VARUKORG -->
+                <section class="varukorg-section d-none">
+                    <article class="varukorg">
+                    <h2 class="varukorg__title">Din beställning</h2>
+                    <div class="varukorg__info">
+                        <ul class="varukorg__list">
+                        <li class="varukorg__list-item">
+                            <h3 class="varukorg__item-name">Bryggkaffe</h3>
+                            <p class="varukorg__undertext">69 kr</p>
+                            <div class="varukorg__quantity-container">
+                            <span class="material-symbols-outlined"> expand_less </span>
+                            <p>2</p>
+                            <span class="material-symbols-outlined"> expand_more </span>
+                            </div>
+                        </li>
+                        <li class="varukorg__list-item">
+                            <h3 class="varukorg__item-name">Caffé Doppio</h3>
+                            <p class="varukorg__undertext">69 kr</p>
+                            <div class="varukorg__quantity-container">
+                            <span class="material-symbols-outlined"> expand_less </span>
+                            <p>2</p>
+                            <span class="material-symbols-outlined"> expand_more </span>
+                            </div>
+                        </li>
+                        <li class="varukorg__list-item">
+                            <h3 class="varukorg__item-name">Cappuccino</h3>
+                            <p class="varukorg__undertext">69 kr</p>
+                            <div class="varukorg__quantity-container">
+                            <span class="material-symbols-outlined"> expand_less </span>
+                            <p>2</p>
+                            <span class="material-symbols-outlined"> expand_more </span>
+                            </div>
+                        </li>
+                        </ul>
+                        <div class="varukorg__total-price">
+                        <span>Total</span>
+                        <p>200 kr</p>
+                        <p class="varukorg__undertext varukorg__undertext--total-undertext">
+                            inkl moms + drönarleverans
+                        </p>
+                        </div>
+                    </div>
+                    <button class="varukorg__btn">Take my money!</button>
+                    </article>
+                </section>
+                <!-- VARUKORG -->
         </header>
         <section class="profile__person-info">
-            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar">
+            <img src="./Assets/profile.svg" alt="" class="profile__person-info-avatar" id="image">
+            <div class="profile__person-info-btn-group">
+                <input id="imageInput" type="file" accept="image/*" style="display: none;">
+                <button class="profile__person-info-btn" id="changeButton">Change Image</button>
+                <button class="profile__person-info-btn">Ändra lösenord</button>
+            </div>
             <h1 class="profile__person-info-name">Sixten Kaffelövér</h1>
             <p class="profile__person-info-email">sixten.kaffelover@zocom.se</p>
         </section>
@@ -71,6 +145,52 @@
             </aside>
         </section>
     </main>
+
+    
+
+    </div>
+    <footer class="landningssida__webpage-footer">
+        <section>
+            <h3>AirBeans</h3>
+            <ul>
+                <li>Om oss</li>
+                <li>Bli en av oss</li>
+                <li>Hitta osss</li>
+                <li>Press</li>
+                <li>Kontakt</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Produkt</h3>
+            <ul>
+                <li>Vårt kaffe</li>
+                <li>Kaffe till hemmet</li>
+                <li>Catering</li>
+                <li>Leverans</li>
+                <li>Presentkort</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Information</h3>
+            <ul>
+                <li>Näring och allergener</li>
+                <li>Privacy Notice</li>
+                <li>Cookie Policy</li>
+                <li>Livsmedelssäkerhet</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Följ oss</h3>
+            <section class="landingssida__socialmedia">
+                <img src="./Assets/mingcute_twitter-line.svg" alt="twitter logo">
+                <img src="./Assets/mdi_instagram.svg" alt="instagram logo">
+                <img src="./Assets/Vector 2.svg" alt="facebook logo">
+            </section>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+  <script src="./profile.js"></script>
+
 </body>
 
 </html>

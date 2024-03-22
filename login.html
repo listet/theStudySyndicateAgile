@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -38,39 +40,174 @@
                             class="nav__mobile-menu-link">Orderstatus</a></li>
                 </ul>
             </nav>
-            <button id="basketBtn" class="header__button header__button--basket">
+            <button id="basketBtn" class="header__button header__button--basket basketPhone">
                 <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
             </button>
+            <nav class="nav__webpage">
+                <section>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./index.html"><img class="nav__list-logo" src="/Assets/A-logo.svg" alt="logo"></a></li>
+                        <li class="nav__item"><a href="./meny.html">Meny</a></li>
+                        <li class="nav__item"><a href="./about.html">Vårt Kaffe</a></li>
+                        <li class="nav__item"><a href="./profile.html">Min Profil</a></li>
+                        <li class="nav__item"><a href="./status-sida.html">Orderstatus</a></li>
+                        <button id="basketBtn" class="header__button header__button--basket">
+                          <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+                        </button>
+                    </ul>
+                </section>
+            </nav>
+                <!-- VARUKORG -->
+        <section class="varukorg-section d-none">
+            <article class="varukorg">
+            <h2 class="varukorg__title">Din beställning</h2>
+            <div class="varukorg__info">
+                <ul class="varukorg__list">
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Bryggkaffe</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Caffé Doppio</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                <li class="varukorg__list-item">
+                    <h3 class="varukorg__item-name">Cappuccino</h3>
+                    <p class="varukorg__undertext">69 kr</p>
+                    <div class="varukorg__quantity-container">
+                    <span class="material-symbols-outlined"> expand_less </span>
+                    <p>2</p>
+                    <span class="material-symbols-outlined"> expand_more </span>
+                    </div>
+                </li>
+                </ul>
+                <div class="varukorg__total-price">
+                <span>Total</span>
+                <p>200 kr</p>
+                <p class="varukorg__undertext varukorg__undertext--total-undertext">
+                    inkl moms + drönarleverans
+                </p>
+                </div>
+            </div>
+            <button class="varukorg__btn">Take my money!</button>
+            </article>
+        </section>
+        <!-- VARUKORG -->
         </header>
-        <section class="form__container">
-            <section class="login__content-h1-text">
-                <img src="./Assets/logo-sml.svg" alt="logo"> <br>
-                <h1 class="login__h1">Välkommen till AirBean-familjen!</h1> <br>
-                <p class="login__p">Genom att skapa ett konto nedan kan du spara och se din historik</p> <br>
+        <div id="formContainerLogin">
+            <section class="form__container">
+                <section class="login__content-h1-text">
+                    <img src="./Assets/logo-sml.svg" alt="logo"> <br>
+                    <h1 class="login__h1">Logga in</h1> <br>
+                    <p class="login__p">Logga in för att spara och se din orderhistorik på ditt konto för smidigare
+                        beställning.</p> <br>
+                </section>
+                <section class="login__container-form">
+                    <form id="loginForm">
+                        <div class="input-section">
+                            <label class="input__label" for="loginName">Namn</label><br>
+                            <input class="input__field" id="loginName" type="text" placeholder="Skriv namn"><br><br>
+
+                            <label class="input__label" for="loginPassword">Lösenord</label><br>
+                            <input class="input__field" id="loginPassword" type="password"
+                                placeholder="skriv lösenord"><br><br>
+
+                            <input id="gdprCheckbox" type="checkbox">
+                            <label class="input__label" for="gdprCheckbox">GDPR Ok!</label><br><br>
+                        </div>
+                        <div class="login__btn-container">
+                            <input class="login__btn" id="loginBtn" type="submit" value="Logga in">
+                        </div>
+                    </form>
+                    <button class="login__btn-white" id="registerBtn" type="button">Inte medlem? Registrera dig
+                        här!</button>
+                </section>
             </section>
-            <section class="login__container-form">
-                <form>
-                    <div class="input-section">
-                        <label class="input__label" for="loginName">Namn</label><br>
-                        <input class="input__field" id="loginName" type="text" placeholder="Skriv namn"><br><br>
-
-                        <label class="input__label" for="loginPassword">Epost</label><br>
-                        <input class="input__field" id="loginPassword" type="password"
-                            placeholder="skriv lösenord"><br><br>
-
-                        <input id="gdprCheckbox" type="checkbox">
-                        <label class="input__label" for="gdprCheckbox">GDPR Ok!</label><br><br>
-                    </div>
-
-                    <div class="login__btn-container">
-                        <input class="login__btn" id="loginBtn" type="submit" value="Brew me a cup!">
-                    </div>
-                </form>
+        </div>
+        <div id="formContainerRegister">
+            <section class="form__container">
+                <h4 class="error__msg" id="errorMsg"></h4>
+                <section class="login__content-h1-text">
+                    <img src="./Assets/logo-sml.svg" alt="logo"> <br>
+                    <h1 class="login__h1">Välkommen till AirBean-familjen!</h1> <br>
+                    <p class="login__p">Genom att skapa ett konto nedan kan du spara och se din historik.</p> <br>
+                </section>
+                <section class="login__container-form">
+                    <form>
+                        <div class="input-section">
+                            <label class="input__label" for="registerName">Namn</label><br>
+                            <input class="input__field" id="registerName" type="text" placeholder="Skriv namn"><br><br>
+                            <label class="input__label" for="registerEmail">Epost</label><br>
+                            <input class="input__field" id="registerEmail" type="email"
+                                placeholder="skriv emailadress..."><br><br>
+                            <label class="input__label" for="registerPassword">Löseord</label><br>
+                            <input class="input__field" id="registerPassword" type="password"
+                                placeholder="skriv lösenord..."><br><br>
+                            <label class="input__label" for="registerPassword">Löseord igen</label><br>
+                            <input class="input__field" id="registerPasswordAgain" type="password"
+                                placeholder="skriv ditt lösenord igen..."><br><br>
+                            <input id="gdprCheckboxRegister" type="checkbox">
+                            <label class="input__label" for="gdprCheckbox">GDPR Ok!</label><br><br>
+                        </div>
+                        <div class="login__btn-container">
+                            <input class="register__btn-user" id="RegisterUserBtn" type="submit" value="Brew me a cup!">
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </div>
+    </div>
+    <footer class="landningssida__webpage-footer">
+        <section>
+            <h3>AirBeans</h3>
+            <ul>
+                <li>Om oss</li>
+                <li>Bli en av oss</li>
+                <li>Hitta osss</li>
+                <li>Press</li>
+                <li>Kontakt</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Produkt</h3>
+            <ul>
+                <li>Vårt kaffe</li>
+                <li>Kaffe till hemmet</li>
+                <li>Catering</li>
+                <li>Leverans</li>
+                <li>Presentkort</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Information</h3>
+            <ul>
+                <li>Näring och allergener</li>
+                <li>Privacy Notice</li>
+                <li>Cookie Policy</li>
+                <li>Livsmedelssäkerhet</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Följ oss</h3>
+            <section class="landingssida__socialmedia">
+                <img src="./Assets/mingcute_twitter-line.svg" alt="twitter logo">
+                <img src="./Assets/mdi_instagram.svg" alt="instagram logo">
+                <img src="./Assets/Vector 2.svg" alt="facebook logo">
             </section>
         </section>
-    </div>
-
+    </footer>
     <script src="account.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
