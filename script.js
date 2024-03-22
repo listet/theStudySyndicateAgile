@@ -87,11 +87,13 @@ varukorg.addEventListener('click', (event) => {
   }
 });
 
+
+
 // Render produkt i varukorg från localstorage
 function renderProductsFromLocalStorage() {
-    // Ellenőrizd, hogy a böngésző támogatja-e a localStorage-t
+    // Kontrollera om din webbläsare stöder localStorage
     if (typeof(Storage) !== "undefined") {
-        // Ellenőrizd, hogy van-e elmentett termék a localStorage-ban
+        // Kontrollera om det finns en sparad produkt i localStorage
         if (localStorage.getItem('selectedCoffee')) {
 
             const coffee = JSON.parse(localStorage.getItem('selectedCoffee'));
@@ -112,11 +114,11 @@ function renderProductsFromLocalStorage() {
             decreaseIcon.classList.add('material-symbols-outlined');
             increaseIcon.classList.add('material-symbols-outlined');
 
-            // Ellenőrizzük, hogy van-e már mennyiség mentve a localStorage-ba, ha nincs, alapértelmezett értéket állítunk be
+            // Vi kontrollerar om det redan finns ett belopp sparat i localStorage, om inte sätter vi ett standardvärde
             const quantity = localStorage.getItem('quantity') ? localStorage.getItem('quantity') : 1;
             quantityValue.textContent = quantity;
 
-            // Az aktuális ár kiolvasása a localStorage-ból, ha van elmentve
+            // Läs aktuellt pris från localStorage om det är sparat
             const currentPrice = localStorage.getItem('price') ? localStorage.getItem('price') : coffee.price;
             price.textContent = currentPrice + ' kr';
 
@@ -135,7 +137,7 @@ function renderProductsFromLocalStorage() {
             quantityContainer.appendChild(increaseIcon);
             varukorgList.appendChild(li);
 
-            // Eseményfigyelők hozzáadása az ikonokhoz
+            // Lägg till evenemangslyssnare till ikoner
             decreaseIcon.addEventListener('click', function() {
                 increaseQuantity(quantityValue);
             });
@@ -143,6 +145,8 @@ function renderProductsFromLocalStorage() {
             increaseIcon.addEventListener('click', function() {
                 decreaseQuantity(quantityValue, li, coffee);
             });
+            // Anropa funktionen för att beräkna och visa totalpriset direkt när sidan laddas
+            calculateTotalPrice();
 
         }
     } else {
@@ -156,7 +160,7 @@ function increaseQuantity(quantityValue, coffee) {
     quantity++;
     quantityValue.textContent = quantity;
     
-    // Az új ár kiszámítása és frissítése a localStorage-ban
+    // Beräkna och uppdatera det nya priset i localStorage
     let currentPrice = localStorage.getItem(`${coffee.id}_price`) || coffee.price;
     currentPrice = parseInt(currentPrice);
     const newPrice = currentPrice + coffee.price;
@@ -170,7 +174,7 @@ function decreaseQuantity(quantityValue, li, coffee) {
         quantity--;
         quantityValue.textContent = quantity;
         
-        // Az új ár kiszámítása és frissítése a localStorage-ban
+        // Beräkna och uppdatera det nya priset i localStorage
         let currentPrice = localStorage.getItem(`${coffee.id}_price`) || coffee.price;
         currentPrice = parseInt(currentPrice);
         const newPrice = currentPrice - coffee.price;
@@ -185,8 +189,25 @@ function decreaseQuantity(quantityValue, li, coffee) {
     }
 }
 
-// Hívjuk meg a függvényt, hogy a betöltésnél azonnal megjelenítse a terméket
+function calculateTotalPrice() {
+    let totalPrice = 0;
+    const varukorgListItems = document.querySelectorAll('.varukorg__list-item');
+    
+    varukorgListItems.forEach(item => {
+        const priceText = item.querySelector('.varukorg__undertext').textContent;
+        const price = parseFloat(priceText.replace(' kr', ''));
+        totalPrice += price;
+    });
+
+    const totalPriceElement = document.getElementById('totalPrice');
+    totalPriceElement.textContent = `${totalPrice.toFixed(2)} kr`;
+}
+
+// Anropa funktionen för att visa produkten direkt vid laddning
 renderProductsFromLocalStorage();
+
+const takeMyMoneyBtn = document.querySelector('.varukorg__btn');
+takeMyMoneyBtn.addEventListener('click', generateOrdernumber);
 // VARUKORG
 
 
