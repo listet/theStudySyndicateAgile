@@ -19,6 +19,20 @@
 
 <body>
   <div class="mobile__wrapper">
+    <nav class="nav__webpage">
+      <section>
+          <ul class="nav__list">
+              <li class="nav__item"><a href="./index.html"><img class="nav__list-logo" src="/Assets/A-logo.svg" alt="logo"></a></li>
+              <li class="nav__item"><a href="./meny.html">Meny</a></li>
+              <li class="nav__item"><a href="./about.html">Vårt Kaffe</a></li>
+              <li class="nav__item"><a href="./profile.html">Min Profil</a></li>
+              <li class="nav__item"><a href="./status-sida.html">Orderstatus</a></li>
+              <button id="basketBtn" class="header__button header__button--basket">
+                <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
+              </button>
+          </ul>
+      </section>
+  </nav>
     <header class="header__meny">
       <!-- Mobile nav -->
       <nav class="nav__mobile-menu">
@@ -45,7 +59,7 @@
           </li>
         </ul>
       </nav>
-      <button id="basketBtn" class="header__button header__button--basket">
+      <button id="basketBtn" class="header__button header__button--basket basketPhone">
         <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
       </button>
       <!-- VARUKORG -->
@@ -97,12 +111,54 @@
     </header>
     <main class="meny">
       <h1 class="meny__title">Meny</h1>
+      <p class="meny__start-info">Oavsett om du vill ha en nybryggd ekologisk kaffe eller en uppfriskande iskaffe så hittar du detta hos oss. Vi erbjuder något för många smaker och tillfällen. Vi gör det med kärlek, på ett medvetet sätt, där du och vår miljö står i fokus. Du beställa direkt i vår app eller på vår hemsida och får leverans via drönare när det passar dig. 
+        Hoppas det ska smaka!</p>
       <section class="meny__overview">
       </section>
     </main>
-    <footer><img src="/Assets/graphics-footer.svg" alt="leaves on the bottom of the page" /></footer>
+    <footer class="footer__phone"><img src="/Assets/graphics-footer.svg" alt="leaves on the bottom of the page" /></footer>
+    <footer class="landningssida__webpage-footer">
+      <section>
+          <h3>AirBeans</h3>
+          <ul>
+              <li>Om oss</li>
+              <li>Bli en av oss</li>
+              <li>Hitta osss</li>
+              <li>Press</li>
+              <li>Kontakt</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Produkt</h3>
+          <ul>
+              <li>Vårt kaffe</li>
+              <li>Kaffe till hemmet</li>
+              <li>Catering</li>
+              <li>Leverans</li>
+              <li>Presentkort</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Information</h3>
+          <ul>
+              <li>Näring och allergener</li>
+              <li>Privacy Notice</li>
+              <li>Cookie Policy</li>
+              <li>Livsmedelssäkerhet</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Följ oss</h3>
+          <section class="landingssida__socialmedia">
+              <img src="./Assets/mingcute_twitter-line.svg" alt="twitter logo">
+              <img src="./Assets/mdi_instagram.svg" alt="instagram logo">
+              <img src="./Assets/Vector 2.svg" alt="facebook logo">
+          </section>
+      </section>
+  </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
+  <script src="admin.js" type="module"></script>
 </body>
 
 </html>
