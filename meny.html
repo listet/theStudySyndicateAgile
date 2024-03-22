@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en">  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,51 +62,25 @@
         <img src="/Assets/bag.svg" alt="an image of a bag inside a button" />
       </button>
       <!-- VARUKORG -->
-      <section class="varukorg-section d-none">
-        <article class="varukorg">
-          <h2 class="varukorg__title">Din beställning</h2>
-          <div class="varukorg__info">
-            <ul class="varukorg__list">
-              <li class="varukorg__list-item">
-                <h3 class="varukorg__item-name">Bryggkaffe</h3>
-                <p class="varukorg__undertext">69 kr</p>
-                <div class="varukorg__quantity-container">
-                  <span class="material-symbols-outlined"> expand_less </span>
-                  <p>2</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </div>
-              </li>
-              <li class="varukorg__list-item">
-                <h3 class="varukorg__item-name">Caffé Doppio</h3>
-                <p class="varukorg__undertext">69 kr</p>
-                <div class="varukorg__quantity-container">
-                  <span class="material-symbols-outlined"> expand_less </span>
-                  <p>2</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </div>
-              </li>
-              <li class="varukorg__list-item">
-                <h3 class="varukorg__item-name">Cappuccino</h3>
-                <p class="varukorg__undertext">69 kr</p>
-                <div class="varukorg__quantity-container">
-                  <span class="material-symbols-outlined"> expand_less </span>
-                  <p>2</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </div>
-              </li>
-            </ul>
-            <div class="varukorg__total-price">
-              <span>Total</span>
-              <p>200 kr</p>
-              <p class="varukorg__undertext varukorg__undertext--total-undertext">
-                inkl moms + drönarleverans
-              </p>
+        <section class="varukorg-section d-none">
+          <article class="varukorg">
+            <h2 class="varukorg__title">Din beställning</h2>
+            <div class="varukorg__info">
+              <ul class="varukorg__list"></ul>
+              <div class="varukorg__total-price">
+                <span>Total</span>
+                <p id="totalPrice">0 kr</p>
+                <p
+                  class="varukorg__undertext varukorg__undertext--total-undertext"
+                >
+                  inkl moms + drönarleverans
+                </p>
+              </div>
             </div>
-          </div>
-          <button class="varukorg__btn">Take my money!</button>
-        </article>
-      </section>
-      <!-- VARUKORG -->
+            <button class="varukorg__btn">Take my money!</button>
+          </article>
+        </section>
+        <!-- VARUKORG -->
     </header>
     <main class="meny">
       <h1 class="meny__title">Meny</h1>
